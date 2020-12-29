@@ -1,21 +1,30 @@
-# Confirm before overwritting files
-alias rm='rm -i'
-alias mv='mv -i'
-alias cp='cp -i'
+#!/bin/sh
+
+# Verbosity & Confirm before overwritting files
+alias rm='rm -vi'
+alias mv='mv -vi'
+alias cp='cp -vi'
+
+# mkdir verbosity & Create paret directories if needed
+alias mkdir='mkdir -vp'
 
 # ls
-alias ls='ls --color=auto --group-directories-first'
+alias ls='ls --human-readable --literal --color=auto --group-directories-first' # h = human readable
 alias ll='ls -l'
 alias la='ls -la'
 alias l.='ls -a | grep "^\."'
 alias ll.='ls -la | grep "^\."'
 
-# grep
+# grep color
 alias grep='grep --color=auto'
 
 # diff
 #alias diff='diff --context=3 --ignore-all-space --color=auto' #Context
 alias diff='diff --unified=3 --ignore-all-space --color=auto' #Unified
+
+# vim
+alias vim='nvim'
+alias neovim='nvim'
 
 # git
 alias init='git init'
@@ -28,15 +37,11 @@ alias ci='git commit -m'
 alias pull='git pull'
 alias push='git push'
 
-# rr
-alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
+# dotfiles
+alias config=' git --git-dir=$HOME/Documents/dotfiles/ --work-tree=$HOME'
 
 # youtube-dl
 alias music-dl='youtube-dl -x --audio-format mp3'
 
-# vim
-alias vim='nvim'
-alias neovim='nvim'
-
-# dotfiles
-alias config=' git --git-dir=$HOME/Documents/dotfiles/ --work-tree=$HOME'
+# rr
+alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
