@@ -1,0 +1,67 @@
+# ex - archive extractor
+# usage: ex <file>
+ex ()
+{
+  if [ -f $1 ] ; then
+    case $1 in
+      *.tar.bz2)   tar xjf $1   ;;
+      *.tar.gz)    tar xzf $1   ;;
+      *.tar.xz)    tar xJf $1   ;;
+      *.bz2)       bunzip2 $1   ;;
+      *.rar)       unrar x $1     ;;
+      *.gz)        gunzip $1    ;;
+      *.tar)       tar xf $1    ;;
+      *.tbz2)      tar xjf $1   ;;
+      *.tgz)       tar xzf $1   ;;
+      *.zip)       unzip $1     ;;
+      *.Z)         uncompress $1;;
+      *.7z)        7z x $1      ;;
+      *)           echo "'$1' cannot be extracted via ex()" ;;
+    esac
+  else
+    echo "'$1' is not a valid file"
+  fi
+}
+
+# Confirm before overwritting files
+alias rm='rm -i'
+alias mv='mv -i'
+alias cp='cp -i'
+
+# ls
+alias ls='ls --color=auto --group-directories-first'
+alias ll='ls -l'
+alias la='ls -la'
+alias l.='ls -a | grep "^\."'
+alias ll.='ls -la | grep "^\."'
+
+# grep
+alias grep='grep --color=auto'
+
+# diff
+#alias diff='diff --context=3 --ignore-all-space --color=auto' #Context
+alias diff='diff --unified=3 --ignore-all-space --color=auto' #Unified
+
+# git
+alias init='git init'
+alias st='git status'
+alias gdiff='git diff'
+alias a='git add && git status'
+alias aa='git add --all && git status'
+alias au='git add --update && git status'
+alias ci='git commit -m'
+alias pull='git pull'
+alias push='git push'
+
+# rr
+alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
+
+# youtube-dl
+alias music-dl='youtube-dl -x --audio-format mp3'
+
+# vim
+alias vim='nvim'
+alias neovim='nvim'
+
+# dotfiles
+alias config=' git --git-dir=$HOME/Documents/dotfiles/ --work-tree=$HOME'
