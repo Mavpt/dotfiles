@@ -47,3 +47,6 @@ zplug load
 
 # auto-completions color
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5'
+
+# neofetch
+neofetch
