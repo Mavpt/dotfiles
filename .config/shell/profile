@@ -4,7 +4,7 @@
 export PATH=$PATH:/usr/sbin:/usr/local/sbin:$HOME/.local/bin:
 
 # Default Programs
-export TERMINAL="gnome-terminal"
+export TERMINAL="terminator"
 export EDITOR="nvim"
 export BROWSER="firefox"
 
