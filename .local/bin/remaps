@@ -6,7 +6,7 @@
 xset r rate 300 50
 
 # Map Caps Lock to Super
-setxkbmap -option caps:super
+setxkbmap -layout us -variant dvp -option caps:super
 
 # Map < to Escape
 xmodmap -e "keycode 94=Escape"

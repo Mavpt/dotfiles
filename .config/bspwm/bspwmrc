@@ -1,0 +1,85 @@
+#! /bin/sh
+
+# bspwm config
+
+###--- sxhkd ---###
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+###--- Autostart ---###
+setwallpaper
+
+killall "picam"
+picom &
+poly_launch &
+
+###--- Monitors ---###
+if [[ $(hostname) == 'curiosity' ]]; then
+	bspc monitor DVI-D-0 -d I II III IV V
+	bspc monitor HDMI-0  -d V VI VII VIII IX X
+elif [[ $(hostname) == 'otherhost' ]]; then
+    	bspc monitor VGA-0 -d I II III IV V
+fi
+
+###--- Global Settings ---###
+bspc config normal_border_color "#4c566a"
+bspc config active_border_color "#1e1e1e"
+bspc config focused_border_color "#406ea5"
+bspc config presel_feedback_color "#5e81ac"
+
+#bspc config split_ratio .5
+#bspc config status_prefix 
+#bspc config external_rules_command
+
+bspc config initial_polarity second_child
+#bspc config directional_focus_tightness
+#bspc config removal_adjustment
+#bspc config presel_feedback
+
+bspc config borderless_monocle true
+bspc config gapless_monocle true
+bspc config top_monocle_padding 1
+bspc config right_monocle_padding 1
+bspc config bottom_monocle_padding 1
+bspc config left_monocle_padding 1
+bspc config single_monocle true
+
+#bspc config pointer_motion_interval
+bspc config pointer_modifier shift
+bspc config pointer_action1 move
+bspc config pointer_action2 resize_side
+bspc config pointer_action3 resize_corner
+bspc config click_to_focus none
+bspc swallow_first_click false
+bspc config focus_follows_pointer true
+bspc config pointer_follows_focus true
+bspc config pointer_follows_monitor true
+
+#bspc config mapping_events_count
+#bspc config ignore_ewmh_focus
+#bspc config ignore_ewmh_fullscreen
+#bspc config ignore_ewmh_struts
+#bspc config center_pseudo_tiled
+bspc config honor_size_hints true
+
+bspc config remove_disabled_monitors true
+bspc config remove_unplugged_monitors true
+bspc config merge_overlapping_monitors true
+
+###--- Monitor and Desktop Settings ---###
+bspc config top_padding 32
+bspc config right_padding 1
+bspc config bottom_padding 1
+bspc config left_padding 1
+
+###--- Desktop Settings ---###
+bspc config window_gap 2
+
+###--- Node Settings ---###
+bspc config border_width 1
+
+###--- Rules ---###
+bspc rule -r "*"
+bspc rule -a mpv state=fullscreen
+bspc rule -a Zathura state=tiled
+bspc rule -a Screenkey manage=off
+bspc rule -a guvcview state=floating rectangle=480x270+1440+810 sticky=on layer=above

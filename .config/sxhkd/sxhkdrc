@@ -1,0 +1,93 @@
+##
+# System Control
+##
+super + shift +	s
+	prompt "Are you sure you would like to shutdown?" "shutdown"
+
+super + shift +	r
+	prompt "Are you sure you would like to reboot?" "reboot"
+
+##
+# BSPWM & SXHKD
+##
+# Quit bspwm
+super + shift + q
+	prompt "Are you sure you would like to quit this Xsession?" "bspc quit"
+
+# Restart bspwm
+super + shift + r
+	bspc wm - r
+
+# Reload sxhkd Coniguration
+super + Escape
+	pkill -USR1 -x sxhkd
+
+# Kill Window
+super + c
+	xdo close
+
+##
+# Layout
+##
+# Alternate between monacle and tiling layouts
+super + m
+        bspc desktop -l next
+
+##
+# Focus
+##
+# Monitors
+super + m
+	bspc monitor -f next
+
+# Workspaces
+super + {0-9}
+	bspc desktop -f {0-9}
+
+# Windows
+super + {h,j,k,l}
+	bspc node -f {west,south,north,east}
+
+##
+# Movment
+##
+# Monitors
+super + {comma,period}
+	bspc node --to-monitor {prev,next}
+
+# Workspaces
+super + control + {0-9}
+	bspc node -d {0-9} && bspc desktop -f {0-9}
+
+# Windows
+super + shift + {h,j,k,l}
+	bspc node -f {west,south,north,east}
+
+##
+# Size
+##
+# Expand Window
+super + alt + {h,j,k,l}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+# Contract Window
+super + control + {h,j,k,l}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+##
+# Launch Programs
+##
+# Program Launcher
+super + space
+	dmenu_run
+
+# Terminal emulator
+super + Return
+	$TERMINAL
+
+# Web browsers
+super + w
+	$BROWSER
+
+super + {f,t,c}
+	{firefox,torbrowser-launcher,chromium}
