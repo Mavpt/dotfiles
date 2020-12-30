@@ -30,7 +30,7 @@ super + c
 # Layout
 ##
 # Alternate between monacle and tiling layouts
-super + m
+super + f
         bspc desktop -l next
 
 ##
