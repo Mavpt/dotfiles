@@ -18,11 +18,13 @@ autocmd BufWrite * %sl/\s\+$//e
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o 
 
 " -----Macros------
-let mapleader=" "
+let mapleader=","
 
 noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
+
+noremap <leader>- i------<Esc>
 
 autocmd FileType sh map <leader>b i#!/bin/sh<CR><CR>
