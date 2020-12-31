@@ -25,6 +25,6 @@ noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 
-noremap <leader>- i------<Esc>
+noremap <leader>- a------<Esc>
 
 autocmd FileType sh map <leader>b i#!/bin/sh<CR><CR>

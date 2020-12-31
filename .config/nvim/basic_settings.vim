@@ -35,3 +35,9 @@ set wildmode=longest,list,full
 " Searching
 set hlsearch
 set ignorecase
+
+" Identation
+set expandtab
+set shiftwidth=8
+set softtabstop=8
+set tabstop=8

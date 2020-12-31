@@ -1,15 +1,11 @@
-##
-# System Control
-##
+# ------System Control------ 
 super + shift +	s
 	prompt "Are you sure you would like to shutdown?" "shutdown"
 
 super + shift +	r
 	prompt "Are you sure you would like to reboot?" "reboot"
 
-##
-# BSPWM & SXHKD
-##
+# ------BSPWM & SXHKD------ 
 # Quit bspwm
 super + shift + q
 	prompt "Are you sure you would like to quit this Xsession?" "bspc quit"
@@ -26,9 +22,7 @@ super + Escape
 super + c
 	xdo close
 
-##
-# Layout
-##
+# ------Layouts------
 # Alternate between monacle and tiling layouts
 super + f
         bspc desktop -l next
@@ -48,9 +42,7 @@ super + {0-9}
 super + {h,j,k,l}
 	bspc node -f {west,south,north,east}
 
-##
-# Movment
-##
+# ------Movment------ 
 # Monitors
 super + {comma,period}
 	bspc node --to-monitor {prev,next}
@@ -63,9 +55,7 @@ super + control + {0-9}
 super + shift + {h,j,k,l}
 	bspc node -f {west,south,north,east}
 
-##
-# Size
-##
+# ------Size------ 
 # Expand Window
 super + alt + {h,j,k,l}
 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
@@ -74,9 +64,7 @@ super + alt + {h,j,k,l}
 super + control + {h,j,k,l}
 	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
-##
-# Launch Programs
-##
+# ------Launch Programs------ 
 # Program Launcher
 super + space
 	rofi -show drun
@@ -88,6 +76,3 @@ super + Return
 # Web browsers
 super + w
 	$BROWSER
-
-super + {f,t,c}
-	{firefox,torbrowser-launcher,chromium}

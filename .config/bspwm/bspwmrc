@@ -2,10 +2,10 @@
 
 # bspwm config
 
-###--- sxhkd ---###
+# -----sxhkd-----
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-###--- Autostart ---###
+# -----Autostart-----
 killall "lxsession"
 lxsession &
 
@@ -21,7 +21,7 @@ volumeicon &
 blueman-applet &
 xfce4-clipman &
 
-###--- Monitors ---###
+# -----Monitors-----
 if [[ $(hostname) == 'curiosity' ]]; then
 	bspc monitor DVI-D-0 -d I II III IV V
 	bspc monitor HDMI-0  -d V VI VII VIII IX X
@@ -29,7 +29,7 @@ elif [[ $(hostname) == 'otherhost' ]]; then
     	bspc monitor VGA-0 -d I II III IV V
 fi
 
-###--- Global Settings ---###
+# -----Global Settings-----
 bspc config normal_border_color "#4c566a"
 bspc config active_border_color "#1e1e1e"
 bspc config focused_border_color "#406ea5"
@@ -74,19 +74,19 @@ bspc config remove_disabled_monitors true
 bspc config remove_unplugged_monitors true
 bspc config merge_overlapping_monitors true
 
-###--- Monitor and Desktop Settings ---###
+# -----Monitor and Desktop Settings-----
 bspc config top_padding 32
 bspc config right_padding 1
 bspc config bottom_padding 1
 bspc config left_padding 1
 
-###--- Desktop Settings ---###
+# -----Desktop Settings-----
 bspc config window_gap 2
 
-###--- Node Settings ---###
+# -----Node Settings-----
 bspc config border_width 1
 
-###--- Rules ---###
+# -----Rules-----
 bspc rule -r "*"
 bspc rule -a mpv state=fullscreen
 bspc rule -a Zathura state=tiled
