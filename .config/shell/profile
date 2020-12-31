@@ -24,7 +24,8 @@ export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
 mkdir -p "$XDG_DATA_HOME"/bash
 export HISTFILE="$XDG_DATA_HOME"/bash/history
 
-mkdir XDG_CONFIG_HOME/git/config
+mkdir $XDG_CONFIG_HOME/git
+touch $XDG_CONFIG_HOME/git/config
 
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 
