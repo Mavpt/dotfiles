@@ -6,11 +6,20 @@
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 ###--- Autostart ---###
+killall "lxsession"
+lxsession &
+
 setwallpaper
 
 killall "picam"
 picom &
+
 poly_launch &
+
+nn-applet &
+volumeicon &
+blueman-applet &
+xfce4-clipman &
 
 ###--- Monitors ---###
 if [[ $(hostname) == 'curiosity' ]]; then

@@ -9,8 +9,3 @@ source $HOME/.Xresources
 # Run remaps script
 ##
 remaps
-
-##
-# Autostart
-##
-transmission-daemon &

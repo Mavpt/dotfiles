@@ -7,6 +7,7 @@ export PATH=$PATH:/usr/sbin:/usr/local/sbin:$HOME/.local/bin:
 source $HOME/.config/shell/aliasrc
 
 # Default Programs
+export WM="bspwm"
 export TERMINAL="terminator"
 export EDITOR="nvim"
 export BROWSER="firefox"
@@ -49,7 +50,8 @@ mkdir $XDG_DATA_HOME/newsboat
 
 export KODI_DATA="$XDG_DATA_HOME"/kodi
 
-export VIMINIT='source "$XDG_CONFIG_HOME/vim/vimrc"'
+#mkdir $XDG_CONFIG_HOME/vim
+#export VIMINIT='source "$XDG_CONFIG_HOME/vim"'
 
 mkdir $XDG_CONFIG_HOME/wget 
 touch $XDG_CONFIG_HOME/wget/wgetrc
@@ -64,4 +66,3 @@ export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
 export HISTFILE="$XDG_DATA_HOME"/zsh/history
 mkdir $XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION
 compinit -d $XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION
-source "$HOME/.cargo/env"
