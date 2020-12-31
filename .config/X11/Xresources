@@ -1,45 +1,36 @@
-Xft.dpi: 96
-URxvt.font: xft:JetBrains Mono Medium:size=12
-URxvt.boldFont: xft:JetBrains Mono Medium:size=12
-URxvt.scrollBar: false
-URxvt.perl-ext-common:resize-font
-URxvt.keysym.C-minus:resize-font:smaller
-URxvt.keysym.C-equal:resize-font:bigger
-URxvt.keysym.C-0:resize-font:reset
-
 ! special
-*.foreground:   #d8dee9
-*.background:   #1d1f21
-*.cursorColor:  #d8dee9
+*.foreground:   #D8DEE9 
+*.background:   #2E3440
+*.cursorColor:  #D8DEE9
 
 ! black
-*.color0:       #2d2d2d
-*.color8:       #444444
+*.color0:       #3B4252
+*.color8:       #4C566A
 
 ! red
-*.color1:       #ed0b0b
-*.color9:       #b55454
+*.color1:       #BF616A
+*.color9:       #BF616A
 
 ! green
-*.color2:       #40a62f
-*.color10:      #78a670
+*.color2:       #A3BE8C
+*.color10:      #A3BE8C
 
 ! yellow
-*.color3:       #f2e635
-*.color11:      #faf380
+*.color3:       #EBCB8B
+*.color11:      #EBCB8B
 
 ! blue
-*.color4:       #268bd2
-*.color12:      #68a7d4
+*.color4:       #81A1C1
+*.color12:      #81A1C1
 
 ! magenta
-*.color5:       #b30ad0
-*.color13:      #c583d0
+*.color5:       #B48EAD
+*.color13:      #B48EAD
 
 ! cyan
-*.color6:       #32d0fc
-*.color14:      #8adaf1
+*.color6:       #88C0D0
+*.color14:      #8FBCBB
 
 ! white
-*.color7:       #555555
-*.color15:      #e0e3e7
+*.color7:       #E5E9F0
+*.color15:      #ECEFF4

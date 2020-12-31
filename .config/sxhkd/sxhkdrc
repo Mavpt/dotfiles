@@ -79,7 +79,7 @@ super + control + {h,j,k,l}
 ##
 # Program Launcher
 super + space
-	dmenu_run
+	rofi -show drun
 
 # Terminal emulator
 super + Return
