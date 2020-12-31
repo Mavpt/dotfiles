@@ -3,6 +3,9 @@
 # PATH
 export PATH=$PATH:/usr/sbin:/usr/local/sbin:$HOME/.local/bin:
 
+# Asliases
+source $HOME/.config/shell/aliasrc
+
 # Default Programs
 export TERMINAL="terminator"
 export EDITOR="nvim"
@@ -48,8 +51,10 @@ export KODI_DATA="$XDG_DATA_HOME"/kodi
 
 export VIMINIT='source "$XDG_CONFIG_HOME/vim/vimrc"'
 
-export WGETRC="$XDG_CONFIG_HOME/wgetrc"
-wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"
+mkdir $XDG_CONFIG_HOME/wget 
+touch $XDG_CONFIG_HOME/wget/wgetrc
+export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
+alias weget='wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"'
 
 mkdir -p "$XDG_DATA_HOME"/wineprefixes
 export WINEPREFIX="$XDG_DATA_HOME"/wineprefixes/default

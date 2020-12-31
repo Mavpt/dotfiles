@@ -83,7 +83,7 @@ super + space
 
 # Terminal emulator
 super + Return
-	$TERMINAL
+	$TERMINAL --borderless --working-directory=$HOME
 
 # Web browsers
 super + w
