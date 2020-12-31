@@ -14,12 +14,12 @@ setwallpaper
 killall "picam"
 picom &
 
-poly_launch &
-
 nn-applet &
-volumeicon &
 blueman-applet &
+volumeicon &
 xfce4-clipman &
+
+poly_launch &
 
 # -----Monitors-----
 if [[ $(hostname) == 'curiosity' ]]; then
