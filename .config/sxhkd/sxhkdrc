@@ -18,7 +18,7 @@ super + shift + r
 super + Escape
 	pkill -USR1 -x sxhkd
 
-# Kill Window
+# Kill Node
 super + c
 	xdo close
 
@@ -27,18 +27,19 @@ super + c
 super + f
         bspc desktop -l next
 
-##
-# Focus
-##
+# ------Focus------
 # Monitors
 super + m
 	bspc monitor -f next
 
-# Workspaces
+# Desktops
 super + {0-9}
 	bspc desktop -f {0-9}
 
-# Windows
+super + shift + {h,j,k,l}
+	bspc desktop -f {west,south,north,east}
+
+# Nodes
 super + {h,j,k,l}
 	bspc node -f {west,south,north,east}
 
@@ -47,20 +48,20 @@ super + {h,j,k,l}
 super + {comma,period}
 	bspc node --to-monitor {prev,next}
 
-# Workspaces
+# Desktops
 super + control + {0-9}
 	bspc node -d {0-9} && bspc desktop -f {0-9}
 
-# Windows
+# Nodes
 super + shift + {h,j,k,l}
 	bspc node -f {west,south,north,east}
 
 # ------Size------ 
-# Expand Window
+# Expand Node
 super + alt + {h,j,k,l}
 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 
-# Contract Window
+# Contract Node
 super + control + {h,j,k,l}
 	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
