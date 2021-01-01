@@ -74,6 +74,9 @@ super + Return
 # Web browser
 super + w
         $BROWSER
+# Screenshot
+Print
+        flameshot gui
 
 # ------Volume Control------
 F1

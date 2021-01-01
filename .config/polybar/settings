@@ -17,7 +17,7 @@ format-padding = 1
 format-margin = 0
 format-offset =
 
-pseudo-transparency = false
+;pseudo-transparency = false
 
 [global/wm]
 margin-top = 0

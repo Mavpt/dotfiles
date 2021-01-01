@@ -11,11 +11,17 @@ lxsession &
 
 setwallpaper
 
-killall "picam"
-picom &
+#killall "picom"
+#picom &
 
 nn-applet &
 blueman-applet &
+
+killall "transmission"
+transmission-daemon &
+
+killall "flameshot"
+flameshot &
 
 poly_launch &
 
