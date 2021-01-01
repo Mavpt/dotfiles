@@ -55,7 +55,7 @@ font-2 = NotoColorEmoji:fontformat=truetype:scale=10:antialias=false;
 font-3 = IPAGothic:fontformat=truetype:pixelsize=10:antialias=false;
 
 modules-left = bspwm xwindow
-modules-right = apt time
+modules-right = apt volume time
 
 tray-position = right
 tray-padding = 1
@@ -109,9 +109,19 @@ type = custom/script
 exec = apt list --installed | wc -l
 interval = 600
 
+[module/volume]
+type = custom/ipc
+hook-0 = poly_pulsevolume
+click-left = $TERMINAL -e pulsemixer &
+click-right = pulsevolctrl "output-mute" "bluez_sink.00_1B_66_D0_E8_81.a2dp_sink"
+scroll-up = pulsevolctrl "output-vol" "bluez_sink.00_1B_66_D0_E8_81.a2dp_sink" +2%
+scroll-down = pulsevolctrl "output-vol" "bluez_sink.00_1B_66_D0_E8_81.a2dp_sink" -2%
+initial = 1
+
 [module/time]
 type = custom/script
 exec = date '+%d/%m/%Y %H:%M:%S'
 click-left = thunderbird &
 label = "%output%"
 interval = 5
+

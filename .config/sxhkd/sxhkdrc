@@ -74,3 +74,11 @@ super + Return
 # Web browser
 super + w
         $BROWSER
+
+# ------Volume Control------
+F1
+  pulsevolctrl "output-mute" "bluez_sink.00_1B_66_D0_E8_81.a2dp_sink"
+
+{F3, F2}
+  pulsevolctrl "output-vol" "bluez_sink.00_1B_66_D0_E8_81.a2dp_sink" {+2%, -2%}
+
