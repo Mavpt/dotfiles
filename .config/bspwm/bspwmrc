@@ -21,12 +21,9 @@ volumeicon &
 poly_launch &
 
 # -----Monitors-----
-if [[ $(hostname) == 'curiosity' ]]; then
-	bspc monitor DVI-D-0 -d I II III IV V
-	bspc monitor HDMI-0  -d V VI VII VIII IX X
-elif [[ $(hostname) == 'otherhost' ]]; then
-    	bspc monitor VGA-0 -d I II III IV V
-fi
+[ $(hostname) = 'Curiosity' ] && bspc monitor DVI-D-0 -d 1 2 3 4 5 && bspc monitor HDMI-0 -d 6 7 8 9 10
+
+[ $(hostname) == 'Voyager' ] && bspc monitor I II III IV V
 
 # -----Global Settings-----
 bspc config normal_border_color "#4c566a"

@@ -33,11 +33,8 @@ super + m
 	bspc monitor -f next
 
 # Desktops
-super + {0-9}
-	bspc desktop -f {0-9}
-
-super + shift + {h,j,k,l}
-	bspc desktop -f {west,south,north,east}
+super + {t,n}
+	bspc desktop -f {prev,next}
 
 # Nodes
 super + {h,j,k,l}
@@ -49,12 +46,12 @@ super + {comma,period}
 	bspc node --to-monitor {prev,next}
 
 # Desktops
-super + control + {0-9}
-	bspc node -d {0-9} && bspc desktop -f {0-9}
+super + shift + {t,n}
+	bspc node --to-desktop {prev,next}
 
 # Nodes
 super + shift + {h,j,k,l}
-	bspc node -f {west,south,north,east}
+	bspc node --to-node {west,south,north,east}
 
 # ------Size------ 
 # Expand Node
@@ -74,6 +71,6 @@ super + space
 super + Return
 	$TERMINAL --borderless --working-directory=$HOME
 
-# Web browsers
+# Web browser
 super + w
-	$BROWSER
+        $BROWSER
