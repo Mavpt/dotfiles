@@ -1,0 +1,32 @@
+[settings]
+throttle-output = 5
+throttle-output-for = 10
+screenchange-reload = false
+
+compositing-background = source
+compositing-foreground = over
+compositing-overline = over
+compositing-underline = over
+compositing-border = over
+
+format-foreground =
+format-background = ${colors.background-alt}
+format-underline = ${colors.primary}
+format-overline =
+format-padding = 1
+format-margin = 0
+format-offset =
+
+pseudo-transparency = false
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+
+[colors]
+background = #2e3440
+background-alt = #3b4252
+foreground = #eceff4
+foreground-alt = #e5e9f0
+primary = #5e81ac
+alert = #88c0d0 

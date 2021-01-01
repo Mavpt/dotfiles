@@ -1,0 +1,4 @@
+[module/apt]
+type = custom/script
+exec = apt list --installed | wc -l
+interval = 600
