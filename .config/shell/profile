@@ -11,6 +11,7 @@ export WM="bspwm"
 export TERMINAL="terminator"
 export EDITOR="nvim"
 export BROWSER="firefox"
+export VIEWER="zathura"
 
 # Root if I ever bother to fix it
 #~/.Root/root/bin/thisroot.sh
@@ -65,4 +66,3 @@ export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
 
 export HISTFILE="$XDG_DATA_HOME"/zsh/history
 mkdir $XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION
-compinit -d $XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION
