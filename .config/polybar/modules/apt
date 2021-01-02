@@ -1,4 +1,6 @@
 [module/apt]
 type = custom/script
-exec = apt list --installed | wc -l
+exec = aptpackages
 interval = 600
+
+format-prefix = " "
