@@ -47,7 +47,7 @@ super + {comma,period}
 
 # Desktops
 super + shift + {t,n}
-	bspc node --to-desktop {prev,next}
+	bspc node --to-desktop {prev,next} --follow
 
 # Nodes
 super + shift + {h,j,k,l}
@@ -80,8 +80,8 @@ Print
 
 # ------Volume Control------
 F1
-  pulsevolctrl "output-mute" "bluez_sink.00_1B_66_D0_E8_81.a2dp_sink"
+        pulsevolctrl "output-mute" "bluez_sink.00_1B_66_D0_E8_81.a2dp_sink"
 
 {F3, F2}
-  pulsevolctrl "output-vol" "bluez_sink.00_1B_66_D0_E8_81.a2dp_sink" {+2%, -2%}
+        pulsevolctrl "output-vol" "bluez_sink.00_1B_66_D0_E8_81.a2dp_sink" {+2%, -2%}
 

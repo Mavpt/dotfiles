@@ -15,6 +15,8 @@ setwallpaper
 #picom &
 
 nn-applet &
+
+killall "blueman-applet"
 blueman-applet &
 
 killall "transmission"
