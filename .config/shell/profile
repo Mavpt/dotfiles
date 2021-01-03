@@ -24,6 +24,8 @@ export XDG_DATA_HOME="$HOME"/.local/share
 export ANDROID_PREFS_ROOT="$XDG_CONFIG_HOME"/android
 export ANDROID_EMULATOR_HOME="$XDG_DATA_HOME"/android/emulator
 
+export CARGO_HOME="$XDG_DATA_HOME"/cargo
+
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
 
 mkdir -p "$XDG_DATA_HOME"/bash

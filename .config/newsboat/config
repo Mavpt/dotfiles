@@ -1,5 +1,5 @@
 # -----General Settings-----
-browser "$BROWSER %u"
+browser "w3w %u"
 
 # Feed settings
 reload-threads 100
