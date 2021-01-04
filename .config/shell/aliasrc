@@ -23,6 +23,7 @@ alias grep='grep --color=auto'
 alias diff='diff --unified=3 --ignore-all-space --color=auto' #Unified
 
 # vim
+alias vi='nvim'
 alias vim='nvim'
 alias neovim='nvim'
 
