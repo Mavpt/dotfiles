@@ -8,4 +8,6 @@ ERRFILE="$XDG_CACHE_HOME/x11/xsession-errors"
 [ -f /etc/xprofile ] && . /etc/xprofile
 [ -f ~/.xprofile ] && . ~/.xprofile
 
-exec $WM
+session=${1:-$WM}
+
+exec $session
