@@ -52,7 +52,10 @@ super + {h,j,k,l}
 # ------Movment------ 
 # Monitors
 super + {comma,period}
-	bspc node --to-monitor {prev,next}
+	bspc node --to-monitor {prev,next} --follow
+
+super + shift + m
+	bspc node --to-monitor next --follow
 
 # Desktops
 super + shift + {t,n}
