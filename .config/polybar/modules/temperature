@@ -58,7 +58,7 @@ label-warn-foreground = ${colors.alert}
 ; temperatures at and above `warn-temperature` will use the last icon
 ; and temperatures at and below `base-temperature` will use `ramp-0`. 
 ; All other icons are distributed evenly between the two temperatures.
-ramp-0 = 
-ramp-1 = 
-ramp-2 =  
+ramp-0 = ⛄
+ramp-1 = 🌡
+ramp-2 = 🔥
 ramp-foreground = ${colors.foreground-alt}

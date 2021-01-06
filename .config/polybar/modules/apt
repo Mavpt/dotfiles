@@ -2,5 +2,3 @@
 type = custom/script
 exec = aptpackages
 interval = 600
-
-format-prefix = " "

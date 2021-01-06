@@ -5,8 +5,7 @@ interval = 3
 
 click-left = $TERMINAL -e htop &
 
-format-prefix = " "
-format = <label> <ramp-used>
+format = 🧠 <label> <ramp-used>
 
 label = %gb_used%/%gb_free%
 

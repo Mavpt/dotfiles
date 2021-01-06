@@ -7,7 +7,7 @@ interval = 1
 
 format = <label> <ramp-coreload>
 
-label = ﲾ %percentage%%
+label = 🖥 %percentage%
 
 ; Spacing between individual per-core ramps
 ramp-coreload-spacing = 1

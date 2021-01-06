@@ -8,9 +8,9 @@ vol=$(echo "$device" | grep "front-left" | awk '{ print $5 }')
 if [ "$mute" = "yes" ]; then
   echo "🔇 mute"
 elif [ "$(echo "$vol" | tr -d "%")" -gt 70 ]; then
-  echo "墳 $vol"
+  echo "🔊 $vol"
 elif [ "$(echo "$vol" | tr -d "%")" -gt 35 ]; then
-  echo "奔 $vol"
+  echo "🔉 $vol"
 else
-  echo "奄 $vol"
+  echo "🔈 $vol"
 fi
