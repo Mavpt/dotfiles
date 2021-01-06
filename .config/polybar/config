@@ -45,10 +45,10 @@ padding = 0
 
 module-margin = 1
 
-font-0 = MesloLGS NF:pixelsize=11
+font-0 = monospace:pixelsize=11
 
 modules-left = bspwm xwindow
-modules-right = apt temperature cpu memory volume time
+modules-right = covid apt temperature cpu memory volume time
 
 separator =
 dim-value =
