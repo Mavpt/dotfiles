@@ -1,0 +1,4 @@
+[module/covid]
+type = custom/script
+exec = covid
+interval = 600

@@ -49,7 +49,8 @@ font-0 = MesloLGS NF:pixelsize=10
 font-1 = Noto Color Emoji:scale=10
 
 modules-left = bspwm xwindow
-modules-right = covid apt temperature cpu memory volume time
+modules-center = date
+modules-right = covid apt temperature cpu memory pulseaudio
 
 separator =
 dim-value =

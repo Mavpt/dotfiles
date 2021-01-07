@@ -5,7 +5,7 @@ type = internal/cpu
 ; Default: 1
 interval = 1 
 
-format = <label> <ramp-coreload>
+format = <label>
 
 label = 🖥 %percentage%
 
