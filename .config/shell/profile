@@ -56,6 +56,8 @@ export OCTAVE_SITE_INITFILE="$XDG_CONFIG_HOME/octave/octaverc"
 
 export KODI_DATA="$XDG_DATA_HOME"/kodi
 
+export RSTUDIO_CONFIG_HOME="$XDG_CONFIG_HOME/rstudio"
+
 #mkdir $XDG_CONFIG_HOME/vim
 #export VIMINIT='source "$XDG_CONFIG_HOME/vim"'
 
@@ -71,3 +73,5 @@ export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
 
 export HISTFILE="$XDG_DATA_HOME"/zsh/history
 mkdir $XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION
+
+export ZPLUG_HOME="$XDG_DATA_HOME"/zplug
