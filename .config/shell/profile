@@ -10,7 +10,7 @@ source $HOME/.config/shell/aliasrc
 export WM="bspwm"
 export TERMINAL="alacritty"
 export EDITOR="nvim"
-export BROWSER="firefox"
+export BROWSER="brave-browser"
 export VIEWER="zathura"
 
 # Root if I ever bother to fix it
