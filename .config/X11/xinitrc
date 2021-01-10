@@ -1,13 +1,38 @@
 #!/bin/sh
 
+# -----XDG Base Directory------
 USERXSESSION="$XDG_CACHE_HOME/x11/xsession"
 USERXSESSIONRC="$XDG_CACHE_HOME/x11/xsessionrc"
 ALTUSERXSESSION="$XDG_CACHE_HOME/x11/Xsession"
 ERRFILE="$XDG_CACHE_HOME/x11/xsession-errors"
 
+# ------Source xprofile------
 [ -f /etc/xprofile ] && . /etc/xprofile
 [ -f ~/.xprofile ] && . ~/.xprofile
 
-session=${1:-$WM}
+# ------Autostart------
+killall "lxsession"
+lxsession &
 
+setwallpaper
+
+#killall "picom"
+#picom &
+
+nn-applet &
+
+killall "blueman-applet"
+blueman-applet &
+
+killall "transmission"
+transmission-daemon &
+
+killall "flameshot"
+flameshot &
+
+killall "mpd"
+mpd &
+
+# ------exec WM or DE------
+session=${1:-$WM}
 exec $session

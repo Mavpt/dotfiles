@@ -13,25 +13,6 @@
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 # -----Autostart-----
-killall "lxsession"
-lxsession &
-
-setwallpaper
-
-#killall "picom"
-#picom &
-
-nn-applet &
-
-killall "blueman-applet"
-blueman-applet &
-
-killall "transmission"
-transmission-daemon &
-
-killall "flameshot"
-flameshot &
-
 poly_launch &
 
 # -----Monitors-----
