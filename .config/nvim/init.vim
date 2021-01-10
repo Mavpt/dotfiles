@@ -1,6 +1,6 @@
 " -----Plugins-----
 source ~/.config/nvim/vim-plug.vim
-call plug#begin('~/local/share/nvim/plugged')
+call plug#begin('~/.local/share/nvim/plugged')
 	Plug 'arcticicestudio/nord-vim'
 call plug#end()
 

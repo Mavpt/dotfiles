@@ -51,6 +51,9 @@ export MATHEMATICA_USERBASE="$XDG_CONFIG_HOME"/mathematica
 mkdir $XDG_CONFIG_HOME/newsboat
 mkdir $XDG_DATA_HOME/newsboat
 
+export OCTAVE_HISTFILE="$XDG_CACHE_HOME/octave-hsts"
+export OCTAVE_SITE_INITFILE="$XDG_CONFIG_HOME/octave/octaverc"
+
 export KODI_DATA="$XDG_DATA_HOME"/kodi
 
 #mkdir $XDG_CONFIG_HOME/vim
@@ -59,7 +62,7 @@ export KODI_DATA="$XDG_DATA_HOME"/kodi
 mkdir $XDG_CONFIG_HOME/wget 
 touch $XDG_CONFIG_HOME/wget/wgetrc
 export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
-alias weget='wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"'
+alias wget='wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"'
 
 mkdir -p "$XDG_DATA_HOME"/wineprefixes
 export WINEPREFIX="$XDG_DATA_HOME"/wineprefixes/default
