@@ -30,8 +30,7 @@ transmission-daemon &
 killall "flameshot"
 flameshot &
 
-killall "mpd"
-mpd &
+[ ! -s ~/.local/share/mpd/pid ] && mpd
 
 # ------exec WM or DE------
 session=${1:-$WM}
