@@ -16,8 +16,8 @@ lxsession &
 
 setwallpaper
 
-#killall "picom"
-#picom &
+killall "picom"
+picom --experimental-backends --backend glx --xrender-sync-fence &
 
 nn-applet &
 
