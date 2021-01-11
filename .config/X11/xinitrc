@@ -32,6 +32,9 @@ flameshot &
 
 [ ! -s ~/.local/share/mpd/pid ] && mpd
 
+killall "mpDris2"
+mpDris2 &
+
 # ------exec WM or DE------
 session=${1:-$WM}
 exec $session

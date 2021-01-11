@@ -74,6 +74,39 @@ super + alt + {h,j,k,l}
 super + control + {h,j,k,l}
 	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
+# ------Volume Control------
+XF86AudioMute
+        pulsevolctrl "output-mute" "bluez_sink.00_1B_66_D0_E8_81.a2dp_sink"
+
+{XF86AudioLowerVolume, XF86AudioRaiseVolume}
+        pulsevolctrl "output-vol" "bluez_sink.00_1B_66_D0_E8_81.a2dp_sink" {-2%, +2%}
+
+# ------Media Controls------
+super + F1
+	$TERMINAL -e ncmpcpp
+
+XF86AudioPlay
+        playerctl play-pause
+
+XF86AudioStop
+        playerctl stop
+
+XF86AudioPrev
+        playerctl previous
+
+XF86AudioNext
+        playerctl next
+
+# ------Screenshots------
+Print
+        flameshot gui
+
+shift + Print
+        flameshot full -c
+
+super + Print
+        flameshot screen -c
+
 # ------Launch Programs------ 
 # Program Launcher
 super + space
@@ -86,14 +119,5 @@ super + Return
 # Web browser
 super + w
         $BROWSER
-# Screenshot
-Print
-        flameshot gui
 
-# ------Volume Control------
-super + F1
-        pulsevolctrl "output-mute" "bluez_sink.00_1B_66_D0_E8_81.a2dp_sink"
-
-super + {F3, F2}
-        pulsevolctrl "output-vol" "bluez_sink.00_1B_66_D0_E8_81.a2dp_sink" {+2%, -2%}
 
