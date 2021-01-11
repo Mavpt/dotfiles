@@ -25,7 +25,7 @@ bindkey '^ ' autosuggest-accept
 source "$HOME/.config/shell/aliasrc"
 
 # zplug - manage plugins
-source /usr/share/zplug/init.zsh
+source $ZPLUG_HOME/init.zsh
 zplug "plugins/git", from:oh-my-zsh
 zplug "plugins/sudo", from:oh-my-zsh
 zplug "plugins/command-not-found", from:oh-my-zsh
