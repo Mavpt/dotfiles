@@ -18,7 +18,7 @@ poly_launch &
 # -----Monitors-----
 [ $(hostname) = 'Curiosity' ] && bspc monitor DVI-D-0 -d 1 2 3 4 5 && bspc monitor HDMI-0 -d 6 7 8 9 10
 
-[ $(hostname) == 'Voyager' ] && bspc monitor I II III IV V
+[ $(hostname) == 'Voyager' ] && bspc monitor eDP-1 -d 1 2 3 4 5
 
 # -----Global Settings-----
 bspc config normal_border_color "#4c566a"
