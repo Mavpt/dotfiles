@@ -50,7 +50,7 @@ font-1 = Noto Color Emoji:scale=10
 
 modules-left = bspwm xwindow
 modules-center = date
-modules-right = covid apt temperature cpu memory pulseaudio
+modules-right = covid temperature cpu memory pulseaudio
 
 separator =
 dim-value =
