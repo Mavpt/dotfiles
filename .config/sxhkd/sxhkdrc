@@ -8,11 +8,11 @@
 # Config by Mavpt
 
 # ------System Control------ 
-super + shift +	s
-	prompt "Are you sure you would like to shutdown?" "shutdown"
+super + alt + s
+	prompt "Are you sure you would like to shutdown?" "shutdown now"
 
-super + shift +	r
-	prompt "Are you sure you would like to reboot?" "reboot"
+super + alt + r
+	prompt "Are you sure you would like to reboot?" "reboot now"
 
 # ------BSPWM & SXHKD------ 
 # Quit bspwm

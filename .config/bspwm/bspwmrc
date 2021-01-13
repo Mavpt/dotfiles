@@ -66,7 +66,7 @@ bspc config remove_unplugged_monitors true
 bspc config merge_overlapping_monitors true
 
 # -----Monitor and Desktop Settings-----
-bspc config top_padding 32
+bspc config top_padding 34
 bspc config right_padding 1
 bspc config bottom_padding 1
 bspc config left_padding 1
