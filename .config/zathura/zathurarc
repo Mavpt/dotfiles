@@ -1,0 +1,22 @@
+#           _   _
+#  ______ _| |_| |__  _   _ _ __ __ _
+# |_  / _` | __| '_ \| | | | '__/ _` |
+#  / / (_| | |_| | | | |_| | | | (_| |
+# /___\__,_|\__|_| |_|\__,_|_|  \__,_|
+# https://pwmt.org/projects/zathura/
+# ------------------------------------
+# Config by Mavpt
+
+# ------General Settings------
+set pages-per-row 2
+
+set recolor true
+
+# ------Keymap------
+map c recolor
+
+map + zoom in
+map - zoom out
+
+map w adjust_window width
+map p adjust_window best-fit
