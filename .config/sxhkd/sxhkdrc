@@ -82,9 +82,6 @@ XF86AudioMute
         pulsevolctrl "output-vol" "bluez_sink.00_1B_66_D0_E8_81.a2dp_sink" {-2%, +2%}
 
 # ------Media Controls------
-super + F1
-	$TERMINAL -e ncmpcpp
-
 XF86AudioPlay
         playerctl play-pause
 
@@ -120,4 +117,10 @@ super + Return
 super + w
         $BROWSER
 
+# Media Control
+super + s
+	$TERMINAL -e ncmpcpp
 
+# RSS reader
+super + r
+        $TERMINAL -e newsboat
