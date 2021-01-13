@@ -10,13 +10,8 @@ source $HOME/.config/shell/aliasrc
 export WM="bspwm"
 export TERMINAL="alacritty"
 export EDITOR="nvim"
-if [ command -v brave-browser &> /dev/null ]
-then
-        export BROWSER="brave-browser"
-else
-        export BROWSER="brave"
-fi
-
+type brave-browser >/dev/null 2>&1 && export BROWSER="brave-browser"
+type brave >/dev/null 2>&1 && export BROWSER="brave"
 export VIEWER="zathura"
 
 # Root if I ever bother to fix it
