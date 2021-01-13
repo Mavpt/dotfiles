@@ -48,7 +48,7 @@ module-margin = 1
 font-0 = MesloLGS NF:pixelsize=10
 font-1 = Noto Color Emoji:scale=10
 
-modules-left = bspwm xwindow
+modules-left = bspwm
 modules-center = date
 modules-right = covid temperature cpu memory pulseaudio
 
