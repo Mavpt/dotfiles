@@ -18,7 +18,6 @@ setwallpaper
 
 killall "picom"
 picom --experimental-backends --backend glx --xrender-sync-fence &
-sleep 5s
 
 nn-applet &
 
