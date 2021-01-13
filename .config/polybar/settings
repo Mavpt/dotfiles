@@ -3,11 +3,11 @@ throttle-output = 5
 throttle-output-for = 10
 screenchange-reload = false
 
-compositing-background = source
-compositing-foreground = over
-compositing-overline = over
-compositing-underline = over
-compositing-border = over
+;compositing-background = source
+;compositing-foreground = over
+;compositing-overline = over
+;compositing-underline = over
+;compositing-border = over
 
 format-foreground =
 format-background = ${colors.background-alt}
