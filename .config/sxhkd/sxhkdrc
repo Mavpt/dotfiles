@@ -124,3 +124,7 @@ super + s
 # RSS reader
 super + r
         $TERMINAL -e newsboat
+
+# File manager
+super + x
+        $TERMINAL -e ranger
