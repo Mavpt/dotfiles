@@ -31,4 +31,9 @@ noremap <leader>- a------<Esc>
 autocmd FileType sh map <leader>b i#!/bin/sh<CR><CR>
 
 " ------VimWiki------
-set autowriteall
+let g:vimwiki_autowriteall = 1
+
+let wiki = {}
+let wiki.path = '$HOME/Documents/VimWiki'
+let wiki.path_html = '$HOME/Documents/VimWiki/HTML'
+let g:vimwiki_list = [wiki]

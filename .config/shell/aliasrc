@@ -26,6 +26,8 @@ alias diff='diff --unified=3 --ignore-all-space --color=auto' #Unified
 alias vi='nvim'
 alias vim='nvim'
 alias neovim='nvim'
+alias vimwiki='nvim $HOME/Documents/VimWiki/index.wiki'
+alias vimw='nvim $HOME/Documents/VimWiki/index.wiki'
 
 # git
 alias init='git init'
