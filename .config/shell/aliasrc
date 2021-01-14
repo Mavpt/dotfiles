@@ -46,3 +46,6 @@ alias music-dl='youtube-dl -x --audio-format mp3'
 
 # rr
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
+
+# apt
+alias aptup='sudo apt update && sudo apt upgrade'

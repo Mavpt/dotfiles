@@ -2,6 +2,7 @@
 source ~/.config/nvim/vim-plug.vim
 call plug#begin('~/.local/share/nvim/plugged')
 	Plug 'arcticicestudio/nord-vim'
+        Plug 'vimwiki/vimwiki'
 call plug#end()
 
 " -----Basic Settings-----
@@ -28,3 +29,6 @@ noremap <Right> <Nop>
 noremap <leader>- a------<Esc>
 
 autocmd FileType sh map <leader>b i#!/bin/sh<CR><CR>
+
+" ------VimWiki------
+set autowriteall
