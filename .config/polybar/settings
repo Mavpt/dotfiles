@@ -24,9 +24,9 @@ margin-top = 0
 margin-bottom = 0
 
 [colors]
-background = #2e3440
-background-alt = #3b4252
-foreground = #eceff4
-foreground-alt = #e5e9f0
-primary = #5e81ac
-alert = #bf616a 
+background = #3B4252
+background-alt = #434C5E
+foreground = #ECEFF4
+foreground-alt = #E5E9F0
+primary = #5E81AC
+alert = #BF616A
