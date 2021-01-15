@@ -14,8 +14,8 @@
 autoload -U colors && colors
 
 # -----History------
-HISTSIZE=10000000
-SAVEHIST=10000000
+HISTSIZE=100000
+SAVEHIST=100000
 HISTFILE=~/.cache/zsh/history
 setopt HIST_IGNORE_ALL_DUPS     # ignore duplicated commands history list
 setopt SHARE_HISTORY            # share command history data
@@ -44,12 +44,12 @@ echo -ne '\e[5 q'                       # Use beam shape cursor on startup.
 preexec() { echo -ne '\e[5 q' ;}        # Use beam shape cursor for each new prompt.
 
 # ------Tab complete------
-autoload -U compinit
+autoload -U compinit && compinit -u
 zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*' # Case insensitivity
+
 zmodload zsh/complist
 compinit
-mkdir -p $XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION
-compinit -d $XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION
 _comp_options+=(globdots)       # Include hidden files.
 
 # Vim keys in tab complete
@@ -61,14 +61,11 @@ bindkey -v '^?' backward-delete-char
 
 # ------Plugins------
 source $ZPLUG_HOME/init.zsh
-zplug "plugins/git", from:oh-my-zsh
-zplug "plugins/sudo", from:oh-my-zsh
 zplug "plugins/command-not-found", from:oh-my-zsh
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-history-substring-search"
 zplug "zsh-users/zsh-completions"
-zplug "junegunn/fzf"
 
 # zplug - install/load new plugins when zsh is started or reloaded
 if ! zplug check --verbose; then
@@ -84,7 +81,7 @@ bindkey '^ ' autosuggest-accept
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5'
 
 # ------Prompt------
-neofetch
+# neofetch
 
 # Starship prompt https://starship.rs/
 eval "$(starship init zsh)"
