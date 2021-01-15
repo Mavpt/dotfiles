@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# ------DBUS------
+eval $(dbus-launch --sh-syntax --exit-with-x11) 
+
 # -----XDG Base Directory------
 USERXSESSION="$XDG_CACHE_HOME/x11/xsession"
 USERXSESSIONRC="$XDG_CACHE_HOME/x11/xsessionrc"
