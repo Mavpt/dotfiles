@@ -48,6 +48,8 @@ autoload -U compinit
 zstyle ':completion:*' menu select
 zmodload zsh/complist
 compinit
+mkdir -p $XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION
+compinit -d $XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION
 _comp_options+=(globdots)       # Include hidden files.
 
 # Vim keys in tab complete
