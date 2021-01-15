@@ -53,7 +53,7 @@ modules-center = date
 modules-right = covid temperature cpu memory pulseaudio
 
 separator =
-dim-value =
+dim-value = 1
 
 wm-name = bspwm
 
