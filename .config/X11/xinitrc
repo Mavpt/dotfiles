@@ -9,37 +9,36 @@ USERXSESSIONRC="$XDG_CACHE_HOME/x11/xsessionrc"
 ALTUSERXSESSION="$XDG_CACHE_HOME/x11/Xsession"
 ERRFILE="$XDG_CACHE_HOME/x11/xsession-errors"
 
-# ------Source xprofile------
-[ -f /etc/xprofile ] && . /etc/xprofile
-[ -f ~/.xprofile ] && . ~/.xprofile
+# ------Remaps Script------
+remaps
 
 # ------Autostart------
-killall "lxsession"
-lxsession &
+#pkill "lxsession"
+#lxsession &
 
-killall "dunst"
-dunst &
+#pkill "dunst"
+pgrep dunst || dunst &
 
 setwallpaper
 
-killall "picom"
-picom --experimental-backends --backend glx --xrender-sync-fence &
+#pkill "picom"
+pgrep picom || picom --experimental-backends --backend glx --xrender-sync-fence &
 
-nn-applet &
+#nn-applet &
 
-killall "blueman-applet"
-blueman-applet &
+#pkill "blueman-applet"
+pgrep blueman-applet || blueman-applet &
 
-killall "transmission"
-transmission-daemon &
+#pkill "transmission"
+pgrep transmission || transmission-daemon &
 
-killall "flameshot"
-flameshot &
+#pkill "flameshot"
+pgrep flameshot || flameshot &
 
 [ ! -s ~/.local/share/mpd/pid ] && mpd
 
-killall "mpDris2"
-mpDris2 &
+#pkill "mpDris2"
+pgrep mpDris2 || mpDris2 &
 
 # ------exec WM or DE------
 session=${1:-$WM}

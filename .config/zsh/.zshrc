@@ -7,15 +7,15 @@
 # --------------------
 # Config by Mavpt
 
-# ------Sourcing------
-[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc"
+# ------Asliases------
+source $HOME/.config/shell/aliasrc
 
 # ------Colors------
 autoload -U colors && colors
 
 # -----History------
-HISTSIZE=100000
-SAVEHIST=100000
+HISTSIZE=10000
+SAVEHIST=10000
 HISTFILE=~/.cache/zsh/history
 setopt HIST_IGNORE_ALL_DUPS     # ignore duplicated commands history list
 setopt SHARE_HISTORY            # share command history data
