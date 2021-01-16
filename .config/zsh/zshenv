@@ -1,0 +1,18 @@
+#!/bin/zsh
+
+# ------PATH------
+export PATH=$PATH:/usr/sbin:/usr/local/sbin:$HOME/.local/bin:
+
+# ------Asliases------
+source $HOME/.config/shell/aliasrc
+
+# ------Zsh dotfiles------
+export ZDOTDIR=$HOME/.config/zsh
+
+# ------Defaults------
+export WM="bspwm"
+export TERMINAL="alacritty"
+export EDITOR="nvim"
+type brave-browser >/dev/null 2>&1 && export BROWSER="brave-browser"
+type brave >/dev/null 2>&1 && export BROWSER="brave"
+export VIEWER="zathura"
