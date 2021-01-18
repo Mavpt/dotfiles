@@ -1,9 +1,16 @@
-" -----Basic Settings-----
 " Backups and such
 set backup
-set backupdir=~/.cache/vim/
+set backupdir=~/.cache/vim/backup
 set swapfile
-set dir=~/.cache/vim
+set dir=~/.cache/vim/swap
+set undofile
+set undodir=~/.cache/vim/undo
+if !isdirectory($HOME."/.cache/vim/undo")
+        call mkdir(HOME."/.cache/vim", "", 0700)
+        call mkdir(HOME."/.cache/vim/backup", "", 0700)
+        call mkdir(HOME."/.cache/vim/swap", "", 0700)
+        call mkdir(HOME."/.cache/vim/undo", "", 0700)
+endif
 
 " Use mouse and system clipboard
 set mouse=a			" Allow for use of mouse
