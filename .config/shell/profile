@@ -56,7 +56,8 @@ export OCTAVE_SITE_INITFILE="$XDG_CONFIG_HOME/octave/octaverc"
 # Kodi
 export KODI_DATA="$XDG_DATA_HOME"/kodi
 
-# RStudio
+# R
+export R_ENVIRON_USER="$XDG_CONFIG_HOME/R/Renviron"
 export RSTUDIO_CONFIG_HOME="$XDG_CONFIG_HOME/rstudio"
 
 # Vim
@@ -64,7 +65,7 @@ export RSTUDIO_CONFIG_HOME="$XDG_CONFIG_HOME/rstudio"
 #export VIMINIT='source "$XDG_CONFIG_HOME/vim"'
 
 # Wget
-mkdir -p $XDG_CONFIG_HOME/wget 
+mkdir -p $XDG_CONFIG_HOME/wget
 touch $XDG_CONFIG_HOME/wget/wgetrc
 export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
 alias wget='wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"'
