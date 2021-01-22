@@ -12,39 +12,11 @@ ERRFILE="$XDG_CACHE_HOME/x11/xsession-errors"
 # ------Remaps Script------
 remaps
 
-# ------Autostart------
-#pkill "lxsession"
-#lxsession &
-
-#pkill "dunst"
-pgrep dunst || dunst &
-
-setwallpaper
-
-#pkill "picom"
-pgrep picom || picom --experimental-backends --backend glx --xrender-sync-fence &
-
-#nn-applet &
-
-#pkill "blueman-applet"
-pgrep blueman-applet || blueman-applet &
-
-#pkill "transmission"
-pgrep transmission || transmission-daemon &
-
-#pkill "flameshot"
-pgrep flameshot || flameshot &
-
-[ ! -s ~/.local/share/mpd/pid ] && mpd
-
-#pkill "mpDris2"
-pgrep mpDris2 || mpDris2 &
-
 # ------exec WM or DE------
 session=${1:-$WM}
 case $session in
         bspwm   ) exec bspwm;;
-        dwm     ) exec startdwm;;
+        dwm     ) exec dwmstart;;
         xmonad  ) exec xmonad;;
         awesome ) exec awesome;;
         # No known session, try to run it as command

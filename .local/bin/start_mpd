@@ -1,0 +1,5 @@
+#!/bin/sh
+
+[ ! -s ~/.local/share/mpd/pid ] && mpd
+
+pgrep mpDris2 || mpDris2 &
