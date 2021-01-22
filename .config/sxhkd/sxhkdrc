@@ -121,7 +121,7 @@ super + c
         chromium
 
 # Media Control
-super + m
+super + s
 	$TERMINAL -e ncmpcpp
 
 # RSS reader
