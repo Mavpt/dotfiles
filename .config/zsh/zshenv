@@ -10,7 +10,7 @@ source $HOME/.config/shell/aliasrc
 export ZDOTDIR=$HOME/.config/zsh
 
 # ------Defaults------
-export WM="bspwm"
+export WM="dwm"
 export TERMINAL="alacritty"
 export EDITOR="nvim"
 type brave-browser >/dev/null 2>&1 && export BROWSER="brave-browser"

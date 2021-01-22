@@ -1,5 +1,13 @@
 #!/bin/sh
-dwmbar &
+# -----Autostart-----
+start_bt &
+start_compositor &
+start_dwmbar &
+start_mpd &
+start_notifications &
+start_screenshot &
+start_torrent &
+start_wallpaper &
 
 while true; do
     # Log stderror to a file

@@ -2,4 +2,4 @@
 
 [ ! -s ~/.local/share/mpd/pid ] && mpd
 
-pgrep mpDris2 || mpDris2 &
+pkill mpDris2 || mpDris2 &
