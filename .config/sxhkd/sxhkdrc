@@ -7,14 +7,14 @@
 # ------------------------------------
 # Config by Mavpt
 
-# ------System Control------ 
+# ------System Control------
 super + alt + s
 	prompt "Are you sure you would like to shutdown?" "shutdown now"
 
 super + alt + r
 	prompt "Are you sure you would like to reboot?" "reboot now"
 
-# ------BSPWM & SXHKD------ 
+# ------BSPWM & SXHKD------
 # Quit bspwm
 super + shift + q
 	prompt "Are you sure you would like to quit this Xsession?" "bspc quit"
@@ -28,7 +28,7 @@ super + Escape
 	pkill -USR1 -x sxhkd
 
 # Kill Node
-super + c
+super + shift + c
 	xdo close
 
 # ------Layouts------
@@ -49,7 +49,7 @@ super + {t,n}
 super + {h,j,k,l}
 	bspc node -f {west,south,north,east}
 
-# ------Movment------ 
+# ------Movment------
 # Monitors
 super + {comma,period}
 	bspc node --to-monitor {prev,next} --follow
@@ -65,7 +65,7 @@ super + shift + {t,n}
 super + shift + {h,j,k,l}
 	bspc node --to-node {west,south,north,east}
 
-# ------Size------ 
+# ------Size------
 # Expand Node
 super + alt + {h,j,k,l}
 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
@@ -104,7 +104,7 @@ shift + Print
 super + Print
         flameshot screen -c
 
-# ------Launch Programs------ 
+# ------Launch Programs------
 # Program Launcher
 super + space
 	rofi -show drun
@@ -117,8 +117,11 @@ super + Return
 super + w
         $BROWSER
 
+super + c
+        chromium
+
 # Media Control
-super + s
+super + m
 	$TERMINAL -e ncmpcpp
 
 # RSS reader
