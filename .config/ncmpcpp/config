@@ -4,10 +4,15 @@ mpd_port = "6600"
 mpd_music_dir = "~/Music"
 
 autocenter_mode = "yes"
-#follow_now_playing_lyrics = "yes"
 ignore_leading_the = "yes"
 ignore_diacritics = "yes"
 default_place_to_search_in = "database"
+
+# ------Lyrics------
+lyrics_directory = ~/.cache/lyrics
+follow_now_playing_lyrics = "yes"
+fetch_lyrics_for_current_song_in_background = "yes"
+store_lyrics_in_song_dir = no
 
 ## Display Modes ##
 playlist_editor_display_mode = "columns"
