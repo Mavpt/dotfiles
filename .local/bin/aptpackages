@@ -1,3 +1,0 @@
-#!/bin/sh
-
-apt-get upgrade -s | grep upgraded, | awk -F ' ' '{print "📦 "$1}'
