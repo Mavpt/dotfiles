@@ -1,3 +1,3 @@
 #!/bin/sh
 
-pkill transmission || transmission-daemon &
+pkill transmission || transmission-daemon

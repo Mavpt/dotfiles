@@ -1,3 +1,3 @@
 #!/bin/sh
 
-pkill flameshot || flameshot &
+pkill flameshot || flameshot

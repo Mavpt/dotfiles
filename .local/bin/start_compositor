@@ -1,3 +1,3 @@
 #!/bin/sh
 
-pkill picom || picom --experimental-backends --backend glx --xrender-sync-fence &
+pkill picom || picom --experimental-backends --backend glx --xrender-sync-fence
