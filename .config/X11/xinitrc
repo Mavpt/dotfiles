@@ -10,6 +10,7 @@ ALTUSERXSESSION="$XDG_CACHE_HOME/x11/Xsession"
 ERRFILE="$XDG_CACHE_HOME/x11/xsession-errors"
 
 # ------Remaps Script------
+setxkbmap -layout pt
 remaps
 
 # ------exec WM or DE------
