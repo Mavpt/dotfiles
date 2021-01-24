@@ -18,3 +18,8 @@ augroup VimWiki
         autocmd BufWritePost *.wiki VimwikiAll2HTML
         autocmd ExitPre *.wiki VimwikiAll2HTML
 augroup END
+
+" LaTeX
+augroup LaTeX
+        autocmd BufWritePost *.tex execute "!pdflatex %"
+augroup END
