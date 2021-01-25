@@ -87,3 +87,6 @@ export HISTFILE="$XDG_DATA_HOME"/zsh/history
 mkdir -p $XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION
 
 export ZPLUG_HOME="$XDG_DATA_HOME"/zplug
+
+# LF Icons
+[ -f "$XDG_CONFIG_HOME"/lf/lficons ] && source "$XDG_CONFIG_HOME"/lf/lficons
