@@ -8,9 +8,10 @@
 # Config by Mavpt
 
 # ------General Settings------
-set pages-per-row 2
+set pages-per-row 1
+set first-page-column 1:1
 
-set recolor true
+set recolor false
 
 # ------Keymap------
 map c recolor

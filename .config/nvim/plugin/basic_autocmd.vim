@@ -21,5 +21,5 @@ augroup END
 
 " LaTeX
 augroup LaTeX
-        autocmd BufWritePost *.tex execute "!pdflatex %"
+        autocmd BufWritePost *.tex execute "!pdflatex % && rm *.log *.aux"
 augroup END
