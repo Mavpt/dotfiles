@@ -51,3 +51,6 @@ alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/mas
 
 # apt
 alias aptup='sudo apt update && sudo apt upgrade'
+
+# sudo
+alias sudo='sudo '
