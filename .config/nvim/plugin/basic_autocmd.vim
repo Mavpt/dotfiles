@@ -23,3 +23,11 @@ augroup END
 augroup LaTeX
         autocmd BufWritePost *.tex execute "!pdflatex % && rm *.log *.aux"
 augroup END
+
+" Markdown
+augroup VimWiki
+        autocmd BufWritePre *.md call AddDate()
+        autocmd BufWritePost *.md !pandoc % -o %:r.html
+augroup END
+
+

@@ -12,3 +12,6 @@ let wiki.template_default = 'VimWiki'
 let wiki.template_ext = '.html'
 "let wiki.syntax = 'markdown'
 let g:vimwiki_list = [wiki]
+
+" Avoid taking control of .md files (https://vi.stackexchange.com/questions/16528/mardown-files-always-have-vimwiki-filetype-vimwiki-plugin)
+let g:vimwiki_global_ext = 0
