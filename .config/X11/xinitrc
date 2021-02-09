@@ -17,7 +17,7 @@ remaps
 session=${1:-$WM}
 case $session in
         bspwm   ) exec bspwm;;
-        dwm     ) exec dwmstart;;
+        dwm     ) exec start_dwm;;
         xmonad  ) exec xmonad;;
         awesome ) exec awesome;;
         # No known session, try to run it as command
