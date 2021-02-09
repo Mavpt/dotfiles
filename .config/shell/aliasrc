@@ -53,4 +53,4 @@ alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/mas
 alias aptup='sudo apt update && sudo apt upgrade'
 
 # sudo
-alias sudo='sudo '
+alias sudo='sudo EDITOR=nvim '

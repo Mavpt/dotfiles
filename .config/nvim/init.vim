@@ -4,6 +4,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 	Plug 'arcticicestudio/nord-vim'
         Plug 'vimwiki/vimwiki'
         Plug 'ap/vim-css-color'
+        Plug 'tpope/vim-fugitive'
 call plug#end()
 
 " ------Plugin Settings------

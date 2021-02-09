@@ -25,8 +25,8 @@ set encoding=utf-8
 set fileencodings=utf-8
 
 " Splits
-set splitbelow
-set splitright
+" set splitbelow
+" set splitright
 
 " Syntax highlighting
 syntax on

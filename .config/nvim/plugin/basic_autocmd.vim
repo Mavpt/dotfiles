@@ -27,7 +27,7 @@ augroup END
 " Markdown
 augroup VimWiki
         autocmd BufWritePre *.md call AddDate()
-        autocmd BufWritePost *.md !pandoc % -o %:r.html
+        autocmd BufWritePost *.md execute "!pandoc --standalone --katex % -o %:r.html"
 augroup END
 
 
