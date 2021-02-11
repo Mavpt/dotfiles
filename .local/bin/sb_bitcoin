@@ -4,4 +4,4 @@
 datahome="${XDG_DATA_HOME:-$HOME/.local/share}/bitcoin"
 
 [ "$(stat -c %y "$datahome" 2>/dev/null | cut -d' ' -f1)" = "$(date '+%Y-%m-%d')" ] || curl -sf https://api.coindesk.com/v1/bpi/currentprice/usd.json > "$datahome"
-echo "1 BTC = $( grep -o 'rate":"[^"]*' $datahome | cut -d\" -f3 ) USD"
+echo " $( grep -o 'rate":"[^"]*' $datahome | cut -d\" -f3 ) $"
