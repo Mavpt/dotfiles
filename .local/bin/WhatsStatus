@@ -1,9 +1,16 @@
 #!/bin/sh
 # Script to analyse WhatsApp Chat
 
+mkdir -p $HOME/.cache/WhatsStatus
+
+printf "Date distribution:\n"
+grep '[0-9]\{1,2\}/[0-9]\{1,2\}/[0-9]\{2\}' "$1" |
+        awk -F ',' '{print $1}' > $HOME/.cache/WhatsStatus/Dates.txt
+uniq -c $HOME/.cache/WhatsStatus/Dates.txt | sort -n
+
+printf "\nWord distribution:\n"
 awk -F ":" '{print $1=$2=""; print $0}' "$1" |
         sed 's/ /\n/g' |
         sed '/^[[:blank:]]*$/d' |
-        sort > Words.txt
-uniq -c Words.txt | sort -n
-#rm Words.txt
+        sort > $HOME/.cache/WhatsStatus/Words.txt
+uniq -c $HOME/.cache/WhatsStatus/Words.txt | sort -n
