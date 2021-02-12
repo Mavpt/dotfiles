@@ -1,0 +1,18 @@
+#!/bin/sh
+# Display currently playing song
+
+ps -C mpd > /dev/null || exit 1
+
+ARTIST=$(mpc current -f %artist%)
+TRACK=$(mpc current -f %title%)
+#POSITION=$(mpc status | grep "%)" | awk '{ print $3 }' | awk -F/ '{ print $1 }')
+#DURATION=$(mpc current -f %time%)
+STATUS=$(mpc status | sed -n 2p | awk '{print $1;}')
+
+if [ "$STATUS" = "[playing]" ]; then
+        STATUS="▶"
+else
+        STATUS="⏸"
+fi
+
+printf "%s %s - %s" "$STATUS" "$ARTIST" "$TRACK"

@@ -1,0 +1,10 @@
+#!/bin/sh
+# Information about Coronavirus cases in Portugal
+
+datahome="${XDG_DATA_HOME:-$HOME/.local/share}/coronavirus"
+
+[ "$(stat -c %y "$datahome" 2>/dev/null | cut -d' ' -f1)" = "$(date '+%Y-%m-%d')" ] || curl -sf https://corona-stats.online/portugal > "$datahome"
+
+grep Portugal $datahome |
+        sed "s/\s*//g ; s/║//g ; s/│/;/g ; s,\x1B\[[0-9;]*[a-zA-Z],,g" |
+        awk -F';' '{print " "$3 " ("$4") | ﮊ "$5" ("$6") | ♥ "$7}'
