@@ -1,7 +1,8 @@
 #!/bin/sh
 
 while :; do
-        xsetroot -name "$(sb_covid) | $(sb_mpd) | $(sb_bitcoin) | $(sb_weather) | $(sb_pulse) | $(sb_date)"
+        #xsetroot -name "$(sb_covid) | $(sb_mpd) | $(sb_rss) | $(sb_bitcoin) | $(sb_weather) | $(sb_pulse) | $(sb_date)"
+        xsetroot -name "$(sb_mpd) | $(sb_rss) | $(sb_bitcoin) | $(sb_weather) | $(sb_pulse) | $(sb_date)"
         sleep 60
 done
 
