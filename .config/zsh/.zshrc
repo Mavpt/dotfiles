@@ -46,7 +46,7 @@ preexec() { echo -ne '\e[5 q' ;}        # Use beam shape cursor for each new pro
 # ------Tab complete------
 autoload -U compinit && compinit -u
 zstyle ':completion:*' menu select
-zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*' # Case insensitivity
+#zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*' # Case insensitivity
 
 zmodload zsh/complist
 compinit
