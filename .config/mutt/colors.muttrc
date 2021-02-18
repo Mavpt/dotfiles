@@ -1,0 +1,51 @@
+#                  _   _
+#  _ __ ___  _   _| |_| |_ _ __ ___
+# | '_ ` _ \| | | | __| __| '__/ __|
+# | | | | | | |_| | |_| |_| | | (__
+# |_| |_| |_|\__,_|\__|\__|_|  \___|
+# ----------------------------------
+# Config by Bruno Oliveira
+# mutt color scheme
+
+# ------Defaults------
+color   normal          default         default
+color   index           brightblue      default ~N      # New message
+color   index           red             default ~F      # Flagged message
+color   index           blue            default ~T      # Tagged messages
+color   index           cyan            default ~D      # Deleted messages
+color	body	        brightyellow    default (https?|ftp)://[\-\.+,/%~_:?&=\#a-zA-Z0-9]+     # Links
+color	body	        brightgreen     default [\-\.+_a-zA-Z0-9]+@[\-\.a-zA-Z0-9]+             # Email addresses
+color	attachment      magenta         default         # Attachments
+color	signature       brightwhite     default         # Signatures
+color   search          brightred       black           # Search results
+
+color	indicator	brightyellow    default         # Selected message
+color	error		red             default         # Error message
+color	status		white           cyan            # Status line
+color	tree		brightblack     default         # Thread tree
+color   tilde           cyan            default         # Blank line padding
+
+# ------Headers------
+color	hdrdefault	black           cyan
+color   header          brightwhite     cyan "^From:"
+color   header          brightwhite     cyan "^Subject:"
+
+# ------Quotes------
+color	quoted		cyan            default
+color   quoted1         brightcyan      default
+color   quoted2         blue            default
+color   quoted3         green           default
+color   quoted4         yellow          default
+color   quoted5         red             default
+
+# ------PGP------
+color	body	        green           default "^gpg: Good signature from"
+color	body	        brightred       default "^gpg: Bad signature from"
+color	body	        brightred       default "^gpg: BAD signature from"
+color	body	        brightred       default "^gpg: Note: This key has expired!"
+color	body	        brightyellow    default	"^gpg: WARNING: This key is not certified with a trusted signature!"
+color	body	        brightyellow    default	"^gpg:          There is no indication that the signature belongs to the owner."
+color	body	        brightyellow    default	"^gpg: can't handle these multiple signatures"
+color	body	        brightyellow    default	"^gpg: signature verification suppressed"
+color	body	        brightyellow    default	"^gpg: invalid node with packet of type"
+

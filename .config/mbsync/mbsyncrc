@@ -1,0 +1,94 @@
+Create Both
+Expunge Both
+SyncState *
+
+# ------Gmail Personal------
+IMAPAccount Gmail_Personal
+Host imap.gmail.com
+Port 993
+User bm.silva.oliveira@gmail.com
+PassCmd "pass show Gmail/Personal_Mutt"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore Gmail_Personal-remote
+Account Gmail_Personal
+
+MaildirStore Gmail_Personal-local
+Path ~/.local/share/Mail/Gmail_Personal/
+Inbox ~/.local/share/Mail/Gmail_Personal/INBOX
+Subfolders Verbatim
+
+Channel Gmail_Personal-inbox
+Master :Gmail_Personal-remote:
+Slave :Gmail_Personal-local:
+Patterns * # Include everything
+#Patterns * ![Gmail]* "[Gmail]/Sent Mail" "[Gmail]/Starred" "[Gmail]/All Mail" # Include everything but
+
+# ------Gmail Accounts------
+IMAPAccount Gmail_Accounts
+Host imap.gmail.com
+Port 993
+User bm.contas.oliveira@gmail.com
+PassCmd "pass show Gmail/Accounts_Mutt"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore Gmail_Accounts-remote
+Account Gmail_Accounts
+
+MaildirStore Gmail_Accounts-local
+Path ~/.local/share/Mail/Gmail_Accounts/
+Inbox ~/.local/share/Mail/Gmail_Accounts/INBOX
+Subfolders Verbatim
+
+Channel Gmail_Accounts-inbox
+Master :Gmail_Accounts-remote:
+Slave :Gmail_Accounts-local:
+Patterns * # Include everything
+#Patterns * ![Gmail]* "[Gmail]/Sent Mail" "[Gmail]/Starred" "[Gmail]/All Mail" # Include everything but
+
+# ------Gmail Maverick------
+IMAPAccount Gmail_Maverick
+Host imap.gmail.com
+Port 993
+User mavpt.maverick@gmail.com
+PassCmd "pass show Gmail/Maverick_Mutt"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore Gmail_Maverick-remote
+Account Gmail_Maverick
+
+MaildirStore Gmail_Maverick-local
+Path ~/.local/share/Mail/Gmail_Maverick/
+Inbox ~/.local/share/Mail/Gmail_Maverick/INBOX
+Subfolders Verbatim
+
+Channel Gmail_Maverick-inbox
+Master :Gmail_Maverick-remote:
+Slave :Gmail_Maverick-local:
+Patterns * # Include everything
+#Patterns * ![Gmail]* "[Gmail]/Sent Mail" "[Gmail]/Starred" "[Gmail]/All Mail" # Include everything but
+
+# ------IST------
+IMAPAccount IST
+Host mail.tecnico.ulisboa.pt
+Port 993
+User b.m.silva.oliveira@tecnico.ulisboa.pt
+PassCmd "pass show IST/IST"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore IST-remote
+Account IST
+
+MaildirStore IST-local
+Path ~/.local/share/Mail/IST/
+Inbox ~/.local/share/Mail/IST/INBOX
+Subfolders Verbatim
+
+Channel IST-inbox
+Master :IST-remote:
+Slave :IST-local:
+Patterns *

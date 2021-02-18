@@ -1,0 +1,17 @@
+#                  _   _
+#  _ __ ___  _   _| |_| |_ _ __ ___
+# | '_ ` _ \| | | | __| __| '__/ __|
+# | | | | | | |_| | |_| |_| | | (__
+# |_| |_| |_|\__,_|\__|\__|_|  \___|
+# ----------------------------------
+# Config by Bruno Oliveira
+
+# ------Movement------
+unbind index g
+bind index gg first-entry
+bind index G last-entry
+
+# ------Sidebar ------
+bind index,pager h sidebar-prev # Ctrl-Shift-P – Previous Mailbox
+bind index,pager l sidebar-next # Ctrl-Shift-N – Next Mailbox
+bind index,pager o sidebar-open # Ctrl-Shift-O – Open Highlighted Mailbox
