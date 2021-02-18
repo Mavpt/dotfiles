@@ -34,10 +34,10 @@ set sidebar_new_mail_only = no
 
 # ------Accounts------
 # Default account
-#source Profiles/IST.muttrc
 source Profiles/Gmail_Personal.muttrc
-#source Profiles/Gmail_Accounts.muttrc
-#source Profiles/Gmail_Maverick.muttrc
+source Profiles/Gmail_Accounts.muttrc
+source Profiles/Gmail_Maverick.muttrc
+source Profiles/IST.muttrc
 
 # Macros for switching accounts
 macro index <f1> '<sync-mailbox><enter-command>source ~/.config/mutt/Profiles/Gmail_Personal.muttrc<enter><change-folder>!<enter>'
