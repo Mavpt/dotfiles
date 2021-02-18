@@ -46,6 +46,9 @@ export MATHEMATICA_USERBASE="$XDG_CONFIG_HOME"/mathematica
 mkdir -p $XDG_CONFIG_HOME/newsboat
 mkdir -p $XDG_DATA_HOME/newsboat
 
+# Pass
+export PASSWORD_STORE_DIR="$XDG_DATA_HOME"/pass
+
 # GNU Octave
 export OCTAVE_HISTFILE="$XDG_CACHE_HOME/octave-hsts"
 export OCTAVE_SITE_INITFILE="$XDG_CONFIG_HOME/octave/octaverc"
@@ -85,5 +88,5 @@ mkdir -p $XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION
 
 export ZPLUG_HOME="$XDG_DATA_HOME"/zplug
 
-# LF Icons
+# ------LF Icons------
 [ -f "$XDG_CONFIG_HOME"/lf/lficons ] && source "$XDG_CONFIG_HOME"/lf/lficons
