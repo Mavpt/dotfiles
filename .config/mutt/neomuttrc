@@ -20,7 +20,7 @@ set menu_scroll=yes
 
 # ------Sidebar------
 set sidebar_visible
-set sidebar_width = 35
+set sidebar_width = 30
 set sidebar_divider_char = '│'
 
 set sidebar_format = "%B%* %N"
@@ -40,11 +40,12 @@ source Profiles/Gmail_Maverick.muttrc
 source Profiles/IST.muttrc
 
 # Macros for switching accounts
-macro index <f1> '<sync-mailbox><enter-command>source ~/.config/mutt/Profiles/Gmail_Personal.muttrc<enter><change-folder>!<enter>'
-macro index <f2> '<sync-mailbox><enter-command>source ~/.config/mutt/Profiles/Gmail_Accounts.muttrc<enter><change-folder>!<enter>'
-macro index <f3> '<sync-mailbox><enter-command>source ~/.config/mutt/Profiles/Gmail_Maverick.muttrc<enter><change-folder>!<enter>'
-macro index <f4> '<sync-mailbox><enter-command>source ~/.config/mutt/Profiles/IST.muttrc<enter><change-folder>!<enter>'
+macro index <f2> '<sync-mailbox><enter-command>source ~/.config/mutt/Profiles/Gmail_Personal.muttrc<enter><change-folder>!<enter>'
+macro index <f3> '<sync-mailbox><enter-command>source ~/.config/mutt/Profiles/Gmail_Accounts.muttrc<enter><change-folder>!<enter>'
+macro index <f4> '<sync-mailbox><enter-command>source ~/.config/mutt/Profiles/Gmail_Maverick.muttrc<enter><change-folder>!<enter>'
+macro index <f5> '<sync-mailbox><enter-command>source ~/.config/mutt/Profiles/IST.muttrc<enter><change-folder>!<enter>'
 
 # ------Source------
+source gpg.muttrc
 source keymap.muttrc
 source colors.muttrc
