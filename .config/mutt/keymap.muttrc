@@ -7,11 +7,14 @@
 # Config by Bruno Oliveira
 
 # ------Movement------
+bind index j next-entry
+bind index k previous-entry
+
 unbind index g
 bind index gg first-entry
 bind index G last-entry
 
 # ------Sidebar ------
-bind index,pager h sidebar-prev # Ctrl-Shift-P – Previous Mailbox
-bind index,pager l sidebar-next # Ctrl-Shift-N – Next Mailbox
-bind index,pager o sidebar-open # Ctrl-Shift-O – Open Highlighted Mailbox
+bind index,pager h sidebar-prev # Previous Mailbox
+bind index,pager l sidebar-next # Next Mailbox
+bind index,pager o sidebar-open # Open Highlighted Mailbox
