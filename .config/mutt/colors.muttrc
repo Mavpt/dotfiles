@@ -7,6 +7,22 @@
 # Config by Bruno Oliveira
 # mutt color scheme
 
+# ------Index------
+color	indicator	        brightyellow    default         # Selected message
+
+color   index                   yellow          default '.*
+color   index                   brightyellow    default  ~U      # Bold unread mail
+color   index_author            red             default '.*'
+color   index_author            brightred       default  ~U
+color   index_collapsed         default         default
+color   index_date              yellow          default
+color   index_flags             red             default '.*'
+color   index_flags             brightred       default  ~U
+color   index_number            blue            default
+color   index_size              yellow          default
+color   index_subject           cyan            default '.*'
+color   index_subject           brightcyan      default ~U
+
 # ------Sidebar------
 color   sidebar_divider         default         default
 
@@ -14,49 +30,30 @@ color   sidebar_indicator       brightyellow    default
 color   sidebar_highlight       red             default
 color   sidebar_spoolfile       cyan            default
 color   sidebar_new             blue            default
+color   sidebar_unread          blue            default
 color   sidebar_flagged         blue            default
 color   sidebar_ordinary        default         default
 
-# ------Index------
-color   index                   yellow          default '.*
-color   index                   brightyellow    default ~N      # Bold new mail
-color   index_author            red             default '.*'
-color   index_author            brightred       default ~N
-color   index_collapsed         default         default
-color   index_date              yellow          default
-color   index_flags             red             default '.*'
-color   index_flags             brightred       default ~N
-color   index_number            blue            default
-color   index_size              yellow          default
-color   index_subject           cyan            default '.*'
-color   index_subject           brightcyan      default ~N
-
-# ------Defaults------
-color   normal                  default         default
-color	body	                brightyellow    default (https?|ftp)://[\-\.+,/%~_:?&=\#a-zA-Z0-9]+     # Links
-color	body	                brightgreen     default [\-\.+_a-zA-Z0-9]+@[\-\.a-zA-Z0-9]+             # Email addresses
-color	attachment              magenta         default         # Attachments
-color	signature               brightwhite     default         # Signatures
-color   search                  brightred       black           # Search results
-
-color	indicator	        brightyellow    default         # Selected message
-color	error		        red             default         # Error message
-color	status		        white           cyan            # Status line
-color	tree		        brightblack     default         # Thread tree
-color   tilde                   cyan            default         # Blank line padding
-
 # ------Headers------
-color	hdrdefault	        black           cyan
-color   header                  brightwhite     cyan "^From:"
-color   header                  brightwhite     cyan "^Subject:"
+color	hdrdefault	        cyan            default
+color   header                  brightcyan      default "^From:"
+color   header                  brightcyan      default "^Subject:"
 
-# ------Quotes------
+# ------Quoted------
 color	quoted		        cyan            default
 color   quoted1                 brightcyan      default
 color   quoted2                 blue            default
 color   quoted3                 green           default
 color   quoted4                 yellow          default
 color   quoted5                 red             default
+
+# ------Defaults------
+color   normal                  default         default
+color	body	                brightyellow    default (https?|ftp)://[\-\.+,/%~_:?&=\#a-zA-Z0-9]+     # Links
+color	body	                brightgreen     default [\-\.+_a-zA-Z0-9]+@[\-\.a-zA-Z0-9]+             # Addresses
+color	attach_headers          default         default ".*"'
+color	attachment              magenta         default
+color	signature               brightwhite     default
 
 # ------PGP------
 color	body	                green           default "^gpg: Good signature from"
@@ -69,3 +66,16 @@ color	body	                brightyellow    default	"^gpg: can't handle these mul
 color	body	                brightyellow    default	"^gpg: signature verification suppressed"
 color	body	                brightyellow    default	"^gpg: invalid node with packet of type"
 
+# ------Other------
+color   bold                    default         default
+color	error		        red             default
+color   markers                 default         default
+color   message                 default         default
+color   options                 default         default
+color   progress                default         default
+color	prompt		        white           cyan
+color   search                  brightred       black
+color   tilde                   cyan            default
+color	tree		        brightblack     default
+color   underline               default         default
+color   warning                 default         default
