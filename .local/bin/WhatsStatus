@@ -8,6 +8,13 @@ grep '[0-9]\{1,2\}/[0-9]\{1,2\}/[0-9]\{2\}' "$1" |
         awk -F ',' '{print $1}' > $HOME/.cache/WhatsStatus/Dates.txt
 uniq -c $HOME/.cache/WhatsStatus/Dates.txt | sort -n
 
+printf "\nPeople distribution:\n"
+awk -F " - " '{print $2}' "$1" |
+        grep ': .*$' |
+        sed 's/: .*$//g' |
+        sort > $HOME/.cache/WhatsStatus/People.txt
+uniq -c $HOME/.cache/WhatsStatus/People.txt | sort -n
+
 printf "\nWord distribution:\n"
 awk -F ":" '{print $1=$2=""; print $0}' "$1" |
         sed 's/ /\n/g' |
