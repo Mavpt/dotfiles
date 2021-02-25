@@ -34,5 +34,3 @@ inoremap ~u ũ
 inoremap ^u û
 
 inoremap cc ç
-
-inoremap nao não

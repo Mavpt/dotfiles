@@ -3,12 +3,13 @@ source ~/.config/nvim/autocorrect.vim
 
 " Insert Date on File Save
 function AddDate()
-        exe "normal ma"
+        exe "normal m9"
         exe "normal Go"
         %g/\n%% The last edit
-        exe "normal dGGo"
+        exe "normal dG"
+        exe "normal Go"
         exe "normal d0"
         put = '%% The last edit'
         put = '<center>Last changed on ' .strftime('%c') .'</center>'
-        exe "normal `a"
+        exe "normal `9"
 endfunction
