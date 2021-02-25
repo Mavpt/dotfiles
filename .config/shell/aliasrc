@@ -53,7 +53,8 @@ alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/mas
 alias aptup='sudo apt update && sudo apt upgrade'
 
 # sudo
-alias sudo='sudo EDITOR=nvim '
+#alias sudo='sudo EDITOR=nvim ' # zsh completion doesn't work properly
+alias sudo='sudo '
 
 # mbsync
 alias mbsync='mbsync -a -c $XDG_CONFIG_HOME/mbsync/mbsyncrc'
