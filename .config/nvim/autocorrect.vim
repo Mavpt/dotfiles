@@ -28,6 +28,11 @@ inoremap `o ò
 inoremap ~o õ
 inoremap ^o ô
 
+inoremap 'O Ó
+inoremap `O Ò
+inoremap ~O Õ
+inoremap ^O Ô
+
 inoremap 'u ú
 inoremap `u ú
 inoremap ~u ũ
