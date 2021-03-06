@@ -22,3 +22,6 @@ export VIEWER="zathura"
 export RSSREADER="newsboat"
 export PLAYER="ncmpcpp"
 export MAIL="neomutt"
+[ $(hostname) = 'Curiosity' ] && export MAIL="neomutt"
+[ $(hostname) = 'Voyager' ] && export MAIL="thunderbird"
+
