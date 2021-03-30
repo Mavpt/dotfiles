@@ -12,9 +12,6 @@ export XDG_DATA_HOME="$HOME"/.local/share
 export ANDROID_PREFS_ROOT="$XDG_CONFIG_HOME"/android
 export ANDROID_EMULATOR_HOME="$XDG_DATA_HOME"/android/emulator
 
-# Rust
-export CARGO_HOME="$XDG_DATA_HOME"/cargo
-
 # Cuda
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
 
@@ -53,12 +50,18 @@ export PASSWORD_STORE_DIR="$XDG_DATA_HOME"/pass
 export OCTAVE_HISTFILE="$XDG_CACHE_HOME/octave-hsts"
 export OCTAVE_SITE_INITFILE="$XDG_CONFIG_HOME/octave/octaverc"
 
+# Go
+export GOPATH="$XDG_DATA_HOME"/go
+
 # Kodi
 export KODI_DATA="$XDG_DATA_HOME"/kodi
 
 # R
 export R_ENVIRON_USER="$XDG_CONFIG_HOME/R/Renviron"
 export RSTUDIO_CONFIG_HOME="$XDG_CONFIG_HOME/RStudio"
+
+# Rust
+export CARGO_HOME="$XDG_DATA_HOME"/cargo
 
 # Vim
 #mkdir -p $XDG_CONFIG_HOME/vim
