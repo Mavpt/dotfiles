@@ -8,7 +8,7 @@ start_notifications &
 start_screenshot &
 start_torrent &
 start_wallpaper &
-start_mail &
+#start_mail &
 
 while true; do
     # Log stderror to a file
