@@ -1,0 +1,28 @@
+#!/bin/sh
+
+usage() {
+   cat <<EOF
+Usage: $0 -G|-C <n> [-P]
+where:
+        -C: Phone numbers coulumn
+        -G: Google CSV"
+        -P: Print phone numbers only
+        -h: Show this message
+EOF
+   exit 0
+}
+
+while getopts "C:GPh" OPT; do case "${OPT}" in
+	C) [ -n "$COL" ] && usage || COL=${OPTARG} ;;
+        G) [ -n "$COL" ] && usage || COL=37 ;;
+        P) PrintPhones=1 ;;
+	h) usage ;;
+	\?) usage ;;
+	*) usage ;;
+esac done
+shift "$((OPTIND-1))"
+
+Result=$(awk -v col=${COL} -F ',' '{ print $col }' $1 | tr -d '+' | tr -d ' ' | sed -e 's/:::/\n/g' | xargs -I{} grep --color {} "$2")
+
+[ -n "$PrintPhones" ] || echo "$Result"
+[ -n "$PrintPhones" ] && echo "$Result" | awk -F ':' '{ print $1 }' | tr '\n' ',\ '
