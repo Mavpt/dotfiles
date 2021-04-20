@@ -38,4 +38,9 @@ inoremap `u ú
 inoremap ~u ũ
 inoremap ^u û
 
+inoremap 'U Ú
+inoremap `U Ù
+inoremap ~U Ũ
+inoremap ^U Û
+
 inoremap cc ç
