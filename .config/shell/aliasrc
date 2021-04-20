@@ -5,11 +5,11 @@ alias rm='rm -vi'
 alias mv='mv -vi'
 alias cp='cp -vi'
 
-# mkdir verbosity & Create paret directories if needed
+# Verbosity & Create parent directories
 alias mkdir='mkdir -vp'
 
 # ls
-alias ls='ls --human-readable --literal --color=auto --group-directories-first' # h = human readable
+alias ls='ls --human-readable --literal --color=auto --group-directories-first'
 alias ll='ls -l'
 alias la='ls -la'
 alias l.='ls -a | grep "^\."'
@@ -45,9 +45,6 @@ alias config='git --git-dir=$HOME/Documents/dotfiles/ --work-tree=$HOME'
 
 # youtube-dl
 alias music-dl='youtube-dl -x --audio-format mp3'
-
-# rr
-alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 
 # apt
 alias aptup='sudo apt update && sudo apt upgrade'
