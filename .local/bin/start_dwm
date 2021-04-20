@@ -1,13 +1,14 @@
 #!/bin/sh
 # -----Autostart-----
 start_bt &
-#start_compositor &
+start_compositor &
 start_dwmbar &
 start_mpd &
 start_notifications &
 start_screenshot &
 start_torrent &
 start_wallpaper &
+start_fm &
 #start_mail &
 
 while true; do
