@@ -20,6 +20,8 @@ case $session in
         dwm     ) exec start_dwm;;
         xmonad  ) exec xmonad;;
         awesome ) exec awesome;;
+        kde     ) exec start_kde;;
+        plasma  ) exec start_kde;;
         # No known session, try to run it as command
         *                 ) exec $1;;
 esac
