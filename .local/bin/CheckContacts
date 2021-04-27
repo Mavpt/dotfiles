@@ -22,7 +22,7 @@ while getopts "C:GPh" OPT; do case "${OPT}" in
 esac done
 shift "$((OPTIND-1))"
 
-Result=$(awk -v col=${COL} -F ',' '{ print $col }' $1 | tr -d '+ ' | sed -e 's/:::/\n/g' | xargs -I{} grep {} "$2")
+Result=$(awk -v col=${COL} -F ',' '{ print $col }' "$1" | tr -d '+ ' | sed -e 's/:::/\n/g' | xargs -I{} grep {} "$2")
 
 [ -n "$PrintPhones" ] || echo "$Result"
 [ -n "$PrintPhones" ] && echo "$Result" | awk -F ':' '{ print $1 }' | tr '\n' ',\ '

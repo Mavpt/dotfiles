@@ -2,11 +2,10 @@
 
 BATTERY=$(acpi  -b | awk -F ', ' '{print $2}' | sed -e 's/%//g')
 
-printf "%s"
-        if [ "$BATTERY" -gt 0 ] && [ "$BATTERY" -le 33 ]; then
-            printf " %s%%" "$VOL"
-        elif [ "$BATTERY" -gt 33 ] && [ "$BATTERY" -le 66 ]; then
-            printf " %s%%" "$BATTERY"
-        else
-            printf " %s%%" "$BATTERY"
-        fi
+if [ "$BATTERY" -gt 0 ] && [ "$BATTERY" -le 33 ]; then
+        printf " %s%%" "$VOL"
+elif [ "$BATTERY" -gt 33 ] && [ "$BATTERY" -le 66 ]; then
+        printf " %s%%" "$BATTERY"
+else
+        printf " %s%%" "$BATTERY"
+fi

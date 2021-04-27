@@ -1,8 +1,8 @@
 #!/bin/sh
 
 while :; do
-        [ $(hostname) = 'Curiosity' ] && xsetroot -name "$(sb_mpd) | $(sb_rss) | $(sb_bitcoin) | $(sb_weather) | $(sb_pulse) | $(sb_date)"
-        [ $(hostname) = 'Voyager' ] && xsetroot -name "$(sb_mpd) | $(sb_rss) | $(sb_bitcoin) | $(sb_weather) | $(sb_pulse) | $(sb_battery) | $(sb_date)"
+        [ "$(hostname)" = 'Curiosity' ] && xsetroot -name "$(sb_mpd) | $(sb_rss) | $(sb_bitcoin) | $(sb_weather) | $(sb_pulse) | $(sb_date)"
+        [ "$(hostname)" = 'Voyager' ] && xsetroot -name "$(sb_mpd) | $(sb_rss) | $(sb_bitcoin) | $(sb_weather) | $(sb_pulse) | $(sb_battery) | $(sb_date)"
         sleep 60
 done
 
