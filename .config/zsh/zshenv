@@ -26,3 +26,6 @@ export MAIL="neomutt"
 #[ $(hostname) = 'Voyager' ] && export MAIL="thunderbird"
 export MAIL="thunderbird"
 export QT_QPA_PLATFORMTHEME="qt5ct"
+
+# ------Fixing misbehaving Java applications------
+export _JAVA_AWT_WM_NONREPARENTING=1
