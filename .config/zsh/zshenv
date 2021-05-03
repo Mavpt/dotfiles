@@ -14,8 +14,9 @@ export WM="dwm"
 export TERMINAL="alacritty"
 export EDITOR="nvim"
 export BROWSER="librewolf"
-type brave-browser >/dev/null 2>&1 && export PBROWSER="brave-browser"
-type brave >/dev/null 2>&1 && export PBROWSER="brave"
+#type brave-browser >/dev/null 2>&1 && export PBROWSER="brave-browser"
+#type brave >/dev/null 2>&1 && export PBROWSER="brave"
+export PBROWSER="ferdi"
 export WBROWSER="chromium"
 export FM="lf"
 export VIEWER="zathura"
@@ -27,5 +28,9 @@ export MAIL="neomutt"
 export MAIL="thunderbird"
 export QT_QPA_PLATFORMTHEME="qt5ct"
 
-# ------Fixing misbehaving Java applications------
+# ------Other------
+# Fix misbehaving Java applications
 export _JAVA_AWT_WM_NONREPARENTING=1
+
+# Disable Recipe Proxying in Franz/Ferdi
+alias ferdi='export CONNECT_WITH_FRANZ=false ; ferdi'
