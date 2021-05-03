@@ -21,7 +21,7 @@ augroup END
 
 " LaTeX
 augroup LaTeX
-        autocmd BufWritePost *.tex execute "!pdflatex % && rm *.log *.aux"
+        autocmd BufWritePost *.tex execute "!pdflatex %"
 augroup END
 
 " Markdown
@@ -29,5 +29,3 @@ augroup VimWiki
         autocmd BufWritePre *.md call AddDate()
         autocmd BufWritePost *.md execute "!pandoc --standalone --katex % -o %:r.html"
 augroup END
-
-
