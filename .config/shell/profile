@@ -30,8 +30,8 @@ mkdir -p "$XDG_DATA_HOME/bash"
 export HISTFILE="$XDG_DATA_HOME/bash/history"
 
 # Git
-mkdir -p $XDG_CONFIG_HOME/git
-touch $XDG_CONFIG_HOME/git/config
+mkdir -p "$XDG_CONFIG_HOME/git"
+touch "$XDG_CONFIG_HOME/git/config"
 
 # GTK
 export GTK_RC_FILES="$XDG_CONFIG_HOME/gtk-1.0/gtkrc"
@@ -50,8 +50,8 @@ export LESSHISTFILE=- #can be used to disable this feature
 export MATHEMATICA_USERBASE="$XDG_CONFIG_HOME/mathematica"
 
 # Newsboat
-mkdir -p $XDG_CONFIG_HOME/newsboat
-mkdir -p $XDG_DATA_HOME/newsboat
+mkdir -p "$XDG_CONFIG_HOME/newsboat"
+mkdir -p "$XDG_DATA_HOME/newsboat"
 
 # Pass
 export PASSWORD_STORE_DIR="$XDG_DATA_HOME/pass"
@@ -78,12 +78,12 @@ export RSTUDIO_CONFIG_HOME="$XDG_CONFIG_HOME/RStudio"
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
 
 # Vim
-#mkdir -p $XDG_CONFIG_HOME/vim
+#mkdir -p "$XDG_CONFIG_HOME/vim"
 #export VIMINIT='source "$XDG_CONFIG_HOME/vim"'
 
 # Wget
-mkdir -p $XDG_CONFIG_HOME/wget
-touch $XDG_CONFIG_HOME/wget/wgetrc
+mkdir -p "$XDG_CONFIG_HOME/wget"
+touch "$XDG_CONFIG_HOME/wget/wgetrc"
 export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
 alias wget='wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"'
 
@@ -109,4 +109,4 @@ mkdir -p "$XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION"
 export ZPLUG_HOME="$XDG_DATA_HOME/zplug"
 
 # ------LF Icons------
-[ -f "$XDG_CONFIG_HOME/lf/lficons" ] && source "$XDG_CONFIG_HOME/lf/lficons"
+[ -f "$XDG_CONFIG_HOME/lf/lficons" ] && . "$XDG_CONFIG_HOME/lf/lficons"

@@ -1,3 +1,4 @@
+#!/bin/zsh
 #          _
 #  _______| |__
 # |_  / __| '_ \
@@ -9,16 +10,16 @@
 # pacman -S zsh-completions zsh-autosuggestions zsh-syntax-highlighting
 
 # ------Asliases------
-source $HOME/.config/shell/aliasrc
+. "$HOME/.config/shell/aliasrc"
 
 # ------Simple options------
 setopt noflowcontrol
 setopt autocd
 
 # -----History------
-HISTSIZE=10000
-SAVEHIST=10000
-HISTFILE=~/.cache/zsh/history
+export HISTSIZE=10000
+export SAVEHIST=10000
+export HISTFILE="$XDG_CACHE_HOME/zsh/history"
 setopt HIST_IGNORE_ALL_DUPS     # ignore duplicated commands history list
 setopt SHARE_HISTORY            # share command history data
 
@@ -27,20 +28,22 @@ bindkey -v
 export KEYTIMEOUT=1
 
 # Cursor shape for different vi modes
-function zle-keymap-select () {
+zle_keymap_select () {
     case $KEYMAP in
-        vicmd) echo -ne '\e[1 q';;      # block
-        viins|main) echo -ne '\e[5 q';; # beam
+        vicmd) printf '\e[1 q';;      # block
+        viins|main) printf '\e[5 q';; # beam
     esac
 }
-zle -N zle-keymap-select
-zle-line-init() {
-    zle -K viins                        # initiate `vi insert` as keymap (can be removed if `bindkey -V` has been set elsewhere)
-    echo -ne "\e[5 q"
+zle -N zle_keymap_select
+
+zle_line_init() {
+    zle -K viins                      # initiate `vi insert` as keymap (can be removed if `bindkey -V` has been set elsewhere)
+    printf "\e[5 q"
 }
-zle -N zle-line-init
-echo -ne '\e[5 q'                       # Use beam shape cursor on startup.
-preexec() { echo -ne '\e[5 q' ;}        # Use beam shape cursor for each new prompt.
+zle -N zle_line_init
+
+printf '\e[5 q'                       # Use beam shape cursor on startup.
+preexec() { printf '\e[5 q' ;}        # Use beam shape cursor for each new prompt.
 
 # ------Completions------
 autoload -Uz compinit
@@ -68,12 +71,12 @@ bindkey "^[[B" history-beginning-search-forward
 
 # ------Extras------
 # Fish-like syntax highlighting
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+. "/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
 # Fish-like autosuggestions
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+. "/usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
 bindkey '^ ' autosuggest-accept
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5'
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5'
 
 # The "Command not found" handler
 #command_not_found_handler() {

@@ -1,10 +1,10 @@
 #!/bin/zsh
 
 # ------PATH------
-export PATH=$PATH:/usr/sbin:/usr/local/sbin:$HOME/.local/bin:
+export PATH="$PATH:/usr/sbin:/usr/local/sbin:$HOME/.local/bin"
 
 # ------Asliases------
-source $HOME/.config/shell/aliasrc
+. "$HOME/.config/shell/aliasrc"
 
 # ------Zsh dotfiles------
 export ZDOTDIR=$HOME/.config/zsh
