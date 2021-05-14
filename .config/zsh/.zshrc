@@ -28,19 +28,19 @@ bindkey -v
 export KEYTIMEOUT=1
 
 # Cursor shape for different vi modes
-zle_keymap_select () {
+zle-keymap-select () {
     case $KEYMAP in
         vicmd) printf '\e[1 q';;      # block
         viins|main) printf '\e[5 q';; # beam
     esac
 }
-zle -N zle_keymap_select
+zle -N zle-keymap-select
 
-zle_line_init() {
+zle-line-init() {
     zle -K viins                      # initiate `vi insert` as keymap (can be removed if `bindkey -V` has been set elsewhere)
     printf "\e[5 q"
 }
-zle -N zle_line_init
+zle -N zle-line-init
 
 printf '\e[5 q'                       # Use beam shape cursor on startup.
 preexec() { printf '\e[5 q' ;}        # Use beam shape cursor for each new prompt.
