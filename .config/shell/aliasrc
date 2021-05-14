@@ -58,3 +58,8 @@ alias mbsync='mbsync -a -c $XDG_CONFIG_HOME/mbsync/mbsyncrc'
 
 # mbsync
 alias mutt='neomutt'
+
+# UGTABLET
+alias settablet='xsetwacom set "UGTABLET 11.6 inch PenDisplay stylus" MapToOutput HEAD-1 ;\
+        xsetwacom set "UGTABLET 11.6 inch PenDisplay eraser" MapToOutput HEAD-1 ;\
+        xsetwacom set "UGTABLET 11.6 inch PenDisplay stylus" Button 2 3'
