@@ -1,8 +1,0 @@
-[module/volume]
-type = custom/ipc
-hook-0 = poly_pulsevolume
-click-left = $TERMINAL -e pulsemixer &
-click-right = pulsevolctrl "output-mute" "bluez_sink.00_1B_66_D0_E8_81.a2dp_sink"
-scroll-up = pulsevolctrl "output-vol" "bluez_sink.00_1B_66_D0_E8_81.a2dp_sink" +2%
-scroll-down = pulsevolctrl "output-vol" "bluez_sink.00_1B_66_D0_E8_81.a2dp_sink" -2%
-initial = 1

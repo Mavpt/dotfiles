@@ -1,4 +1,0 @@
-[module/apt]
-type = custom/script
-exec = aptpackages
-interval = 600

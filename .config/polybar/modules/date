@@ -1,8 +1,0 @@
-[module/date]
-type = internal/date
-interval = 60.0
-date = %Y-%m-%d%
-time = %H:%M
-
-format = 🕒 <label>
-label = %date% %time%
