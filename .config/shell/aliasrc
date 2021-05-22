@@ -63,3 +63,13 @@ alias mutt='neomutt'
 alias settablet='xsetwacom set "UGTABLET 11.6 inch PenDisplay stylus" MapToOutput HEAD-1 ;\
         xsetwacom set "UGTABLET 11.6 inch PenDisplay eraser" MapToOutput HEAD-1 ;\
         xsetwacom set "UGTABLET 11.6 inch PenDisplay stylus" Button 2 3'
+
+# make
+alias makebear='make clean; bear -- make'
+
+# fzf
+alias open='xdg-open'
+
+alias fcd='cd "$(find -type d | fzf -i)"'
+alias fopen='xdg-open "$(find -type f | fzf -i)"'
+alias fpath='find -type f | fzf -i | sed "s/^..//" | tr -d "\n" | xclip -selection c'
