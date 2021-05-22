@@ -21,7 +21,7 @@ augroup END
 
 " LaTeX
 augroup LaTeX
-        autocmd BufWritePost *.tex execute "!pdflatex %"
+        autocmd BufWritePost *.tex execute "!pdflatex main.tex"
 augroup END
 
 " Markdown
