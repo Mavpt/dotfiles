@@ -1,3 +1,8 @@
+----- Global Variables -----
+CONFIG_PATH = vim.fn.stdpath('config') .. "/"
+DATA_PATH   = vim.fn.stdpath('data')   .. "/"
+CACHE_PATH  = vim.fn.stdpath('cache')  .. "/"
+
 ----- Plugins -----
 require("plugins")
 
@@ -9,5 +14,7 @@ require("settings")
 require("plugconfig/lspconfig")
 require("plugconfig/nvim-treesitter")
 require("plugconfig/nvim-compe")
---require(plugconfig/vimwiki)
+vim.cmd("source " .. CONFIG_PATH .. "plugconfig/vimwiki.vim")
+vim.cmd("source " .. CONFIG_PATH .. "plugconfig/vim-fugitive.vim")
+--require("plugconfig/vimwiki")
 --require(plugconfig/vim-fugitive)

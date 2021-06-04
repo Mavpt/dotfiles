@@ -5,7 +5,7 @@ vim.o.backupdir = os.getenv("HOME") .. "/.cache/vim/backup"
 vim.o.swapfile  = true
 vim.o.dir       = os.getenv("HOME") .. "/.cache/vim/swap"
 
-vim.o.undofile  = true
+vim.bo.undofile = true
 vim.o.undodir   = os.getenv("HOME") .. "/.cache/vim/undo"
 
 --- Mouse and System Clipboard -----
