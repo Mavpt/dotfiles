@@ -49,7 +49,6 @@ preexec() { printf '\e[5 q' ;}        # Use beam shape cursor for each new promp
 autoload -Uz compinit
 zmodload zsh/complist
 
-mkdir -p    "$XDG_STATE_HOME/zsh/zcompdump-$ZSH_VERSION"
 compinit -d "$XDG_STATE_HOME/zsh/zcompdump-$ZSH_VERSION"
 
 zstyle ':completion:*' menu select

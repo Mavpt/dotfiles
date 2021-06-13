@@ -22,6 +22,8 @@ bind-key l open
 bind-key H prev-feed
 bind-key L next-feed
 bind-key c toggle-show-read-feeds
+bind-key N prev-unread
+bind-key n next-unread
 
 macro w set browser "mpv %u" ; open-in-browser ; set browser "$BROWSER %u"
 
