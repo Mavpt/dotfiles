@@ -2,5 +2,7 @@
 
 [ ! -s ~/.local/share/mpd/pid ] && mpd
 
-mpc clear ; mpc listall | mpc add
+mpc clear
+mpc listall | mpc add
+
 #pkill mpDris2 || mpDris2
