@@ -3,7 +3,7 @@
 BATTERY=$(acpi  -b | awk -F ', ' '{print $2}' | sed -e 's/%//g')
 
 if [ "$BATTERY" -gt 0 ] && [ "$BATTERY" -le 33 ]; then
-        printf " %s%%" "$VOL"
+        printf " %s%%" "$BATTERY"
 elif [ "$BATTERY" -gt 33 ] && [ "$BATTERY" -le 66 ]; then
         printf " %s%%" "$BATTERY"
 else
