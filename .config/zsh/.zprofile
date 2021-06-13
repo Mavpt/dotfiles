@@ -1,1 +1,1 @@
-/home/bruno//.config/shell/profile
+/home/bruno/.config/shell/profile

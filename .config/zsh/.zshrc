@@ -19,7 +19,7 @@ setopt autocd
 # -----History------
 export HISTSIZE=10000
 export SAVEHIST=10000
-export HISTFILE="$XDG_CACHE_HOME/zsh/history"
+#export HISTFILE="$XDG_STATE_HOME/zsh/history" # .zprofile
 setopt HIST_IGNORE_ALL_DUPS     # ignore duplicated commands history list
 setopt SHARE_HISTORY            # share command history data
 
@@ -48,7 +48,9 @@ preexec() { printf '\e[5 q' ;}        # Use beam shape cursor for each new promp
 # ------Completions------
 autoload -Uz compinit
 zmodload zsh/complist
-compinit
+
+mkdir -p    "$XDG_STATE_HOME/zsh/zcompdump-$ZSH_VERSION"
+compinit -d "$XDG_STATE_HOME/zsh/zcompdump-$ZSH_VERSION"
 
 zstyle ':completion:*' menu select
 zstyle ':completion::complete:*' gain-privileges 1 # Completion of of privileged environments in privileged commands
@@ -101,8 +103,7 @@ export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5'
 #}
 
 # ------Prompt------
-# neofetch
-
+#neofetch
 # Starship prompt
 # https://starship.rs/
 eval "$(starship init zsh)"
