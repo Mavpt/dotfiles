@@ -25,10 +25,7 @@ return require('packer').startup(function()
         use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
         use 'hrsh7th/nvim-compe'
         use 'hrsh7th/vim-vsnip'
-        --use 'ap/vim-css-color'
 
 	-- Other
         use 'vimwiki/vimwiki'
-	--use 'glepnir/dashboard-nvim'
-	--use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/popup.nvim', 'nvim-lua/plenary.nvim' }}
 end)

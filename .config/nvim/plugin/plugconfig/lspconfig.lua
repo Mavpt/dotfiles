@@ -1,4 +1,3 @@
-lua << EOF
 local nvim_lsp = require('lspconfig')
 
 -- Use an on_attach function to only map the following keys
@@ -36,9 +35,10 @@ end
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
--- Installation: sudo pacman -S bash-language-server rust-analyzer
-local servers = { "bashls", "rust_analyzer" }
+-- Installation:
+        -- sudo pacman -S bash-language-server rust-analyzer texlab
+        -- paru -S lua-language-server
+local servers = { "bashls", "rust_analyzer", "clangd" }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup { on_attach = on_attach }
 end
-EOF
